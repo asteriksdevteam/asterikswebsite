@@ -29,10 +29,10 @@
                     <input type="text" value="{{$slider->Heading}}" name="heading" id="heading" class="form-control outline-input mt-15" placeholder="Slider Heading">
                 </div>
                 
-                <div class="col-md-6 form-group">
+                {{-- <div class="col-md-6 form-group">
                     <label class="mb-0" for="">Meta Tag</label>
                     <input type="text" value="{{$slider->MetaTitle}}" name="metatitle"class="form-control outline-input mt-15" placeholder="Meta Title">
-                </div>
+                </div> --}}
                 <div class="col-md-6 form-group">
                     <label class="mb-20" for="">Status</label>
                     <div class="d-flex">

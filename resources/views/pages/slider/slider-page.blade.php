@@ -3,7 +3,20 @@
 @section('content')
 <!-- Container -->
 <div class="container">
-
+<style>
+    .sup-num{
+    background: #f57b20;
+    padding: 0;
+    color: #fff;
+    left: 67px;
+    /* top: 10px; */
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    }
+</style>
     <!-- Title -->
     <div class="hk-pg-header">
         <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Home</h4>
@@ -33,8 +46,8 @@
                                         <th>Sno</th>
                                         <th>Name</th>
                                         <th>Main Heading</th>
+                                        <th>Slider</th>
                                         <th>Description</th>
-                                        <th>Thumbnail</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -45,8 +58,8 @@
                                         <td>{{$key+1}}</td>
                                         <td>{{$data->Name}}</td>
                                         <td>{{$data->Heading}}</td>
+                                        <td  class="position-relative"><a href="{{route('slider.images',$data->id)}}" title=""><span class="sup-num">{{count($data->sliderImages)}}</span><i class="fa fa-image fa-4x"aria-hidden="true" style="color: #bf3434;"></i></a></td>
                                         <td>{{$data->Description}}</td>
-                                        <td><img src="{{asset($data->sliderImage->imagePath)}}" width="60" alt="{{$data->sliderImage->imageAlt}}"></td>
                                         <td>{{$data->Status==1?'Active':'InActive'}}</td>
                                         <td><a href="{{route('slider.edit',$data->id)}}"><i class="fa fa-edit text-blue"></i></a></td>
                                     </tr>

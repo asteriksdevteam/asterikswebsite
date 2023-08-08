@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
+
+    public function getThumbnailAttribute($value)
+    {
+        return asset('uploads/blog' . $value);
+    }
+
+    function category()
+    {
+        return $this->belongsTo(Category::class ,'category_id' ,'id');
+    }
 }

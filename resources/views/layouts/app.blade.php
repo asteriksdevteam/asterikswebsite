@@ -98,6 +98,7 @@
     <!-- Init JavaScript -->
     <script src="{{asset('dist/js/init.js')}}"></script>
 	<script src="{{asset('dist/js/dashboard-data.js')}}"></script>
+     <script src="{{asset('dist/js/ckeditor/ckeditor.js')}}" type="text/javascript"></script>
     @stack('scripts')
 </body>
 </html>

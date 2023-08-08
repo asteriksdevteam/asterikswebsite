@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label class="mb-0" for="">Select Slider</label>
-                    <select class="form-control custom-select  mt-15">
+                    <select name="imageid" class="form-control custom-select  mt-15">
                         <option selected="">Select</option>
                         @foreach($slider as $slider)
                         <option value="{{$slider->id}}">{{$slider->Name}}</option>

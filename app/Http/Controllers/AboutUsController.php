@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\AboutUs;
 
 class AboutUsController extends Controller
 {
@@ -13,7 +14,9 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        //
+        $aboutus=AboutUs::first();
+        // dd($aboutus);
+        return view('aboutus.new',compact('aboutus'));
     }
 
     /**
@@ -68,7 +71,25 @@ class AboutUsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+    
+        $requestArray = $request->except(['submit_form','_token']);
+        $SliderImage="";
+        if ($request->hasFile('work_image')) {
+          $file  = request()->file('work_image');
+          $SliderImage = trim(time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/aboutus/', $SliderImage);
+        }else
+        {
+          $aboutUs =   AboutUs::find($request->id);
+          $SliderImage = $aboutUs->work_image;
+        }
+        $requestdata = $requestArray;
+        $requestdata['work_image'] = $SliderImage;
+        $aboutUs =   AboutUs::find($request->id);
+        $aboutUs->fill($requestdata);
+        $aboutUs->save();
+        return  redirect()->route('about-us');
+
     }
 
     /**

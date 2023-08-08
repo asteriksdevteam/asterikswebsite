@@ -1,0 +1,238 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\ServiceCategory;
+use App\Models\SubCategory;
+use App\Models\Service;
+class ServiceController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+      $isService = false;
+        $categories =ServiceCategory::get();
+        $subcategories = SubCategory::with('getCategory')->get();
+
+        return view('service.index',compact('isService','categories','subcategories'));
+    }
+
+    public function getSubcategory(Request $request) {
+     return SubCategory::with('getCategory')->where('category_id',$request->categoryId)->get(); 
+    }
+
+    public function getData(Request $request) {
+      $isService = true;
+      $cateId = $request->category;
+      $subcateId = $request->subcategory;
+      $categories =ServiceCategory::get();
+      $subcategories = SubCategory::with('getCategory')->get();
+      $services =  Service::where('category_id',$request->category)->where('sub_category_id',$request->subcategory)->first();
+     
+      return view('service.index',compact('isService','services','cateId','subcateId','categories','subcategories'));
+     
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+       
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+      
+        if ($request->hasFile('header_image')) {
+          $file  = request()->file('header_image');
+          $header_image = trim('header_image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $header_image);
+          $header_image = 'uploads/service/'.$header_image;
+
+        }
+        if ($request->hasFile('box1image')) {
+          $file  = request()->file('box1image');
+          $box1image = trim('box1image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $box1image);
+          $box1image = 'uploads/service/'.$box1image;
+
+        }
+        if ($request->hasFile('box2image')) {
+          $file  = request()->file('box2image');
+          $box2image = trim('box2image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $box2image);
+          $box2image = 'uploads/service/'.$box2image;
+
+        }
+        if ($request->hasFile('box3image')) {
+          $file  = request()->file('box3image');
+          $box3image = trim('box3image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $box3image);
+          $box3image = 'uploads/service/'.$box3image;
+
+        }
+        if ($request->hasFile('box4image')) {
+          $file  = request()->file('box4image');
+          $box4image = trim('box4image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $box4image);
+          $box4image = 'uploads/service/'.$box4image;
+
+        }
+        if ($request->hasFile('portfolioimage')) {
+          $file  = request()->file('portfolioimage');
+          $portfolioimage = trim('portfolioimage'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $portfolioimage);
+          $portfolioimage = 'uploads/service/'.$portfolioimage;
+
+        }
+        if ($request->hasFile('portfoliologo')) {
+          $file  = request()->file('portfoliologo');
+          $portfoliologo = trim('portfoliologo'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $portfoliologo);
+          $portfoliologo = 'uploads/service/'.$portfoliologo;
+
+        }
+        if ($request->hasFile('chooseimage')) {
+          $file  = request()->file('chooseimage');
+          $chooseimage = trim('chooseimage'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $chooseimage);
+          $chooseimage = 'uploads/service/'.$chooseimage;
+        }
+      $serviceID = $request->service_id;
+      if($serviceID){
+      $service = Service::find($serviceID);
+      $service->main_heading = @$request->mainheading;
+      $service->main_desc = @$request->maindescription;
+      if ($request->hasFile('header_image'))
+      $service->header_image = @$header_image;
+      $service->service_heading = @$request->serviceheading;
+      $service->service_desc = @$request->servicedesc;
+      $service->box1_heading = @$request->box1heading;
+      $service->box1_desc = @$request->box1desc;
+      if ($request->hasFile('box1image'))
+      $service->box1_image = @$box1image;
+      $service->box2_heading = @$request->box2heading;
+      $service->box2_desc = @$request->box2desc;
+      if ($request->hasFile('box2image'))
+      $service->box2_image = @$box2image;
+      $service->box3_heading = @$request->box3heading;
+      $service->box3_desc = @$request->box3desc;
+      if ($request->hasFile('box3image'))
+      $service->box3_image = @$box3image;
+      $service->box4_heading = @$request->box4heading;
+      $service->box4_desc = @$request->box4desc;
+      if ($request->hasFile('box4image'))
+      $service->box4_image = @$box4image;
+      $service->portfolio_heading = @$request->portfolioheading;
+      $service->portfolio_desc = @$request->portfoliodesc;
+      if ($request->hasFile('portfolioimage'))
+      $service->portfolio_image = @$portfolioimage;
+      if ($request->hasFile('portfoliologo'))
+      $service->portfolio_logo = @$portfoliologo;
+      $service->company_heading = @$request->companyheading;
+      $service->company_desc = @$request->companydesc;
+      $service->choose_heading = @$request->chooseheading;
+      $service->choose_desc = @$request->choosedesc;
+      if ($request->hasFile('chooseimage'))
+      $service->choose_image = @$chooseimage;
+      $service->process_heading = @$request->processheading;
+      $service->process_desc = @$request->processdesc;
+      $service->category_id = @$request->cateId;
+      $service->sub_category_id = @$request->subcateId;
+      $service->save();
+      return redirect()->back()->with('success', 'Successfully Update!!!');
+      }else{
+      $service = new Service();
+      $service->main_heading = @$request->mainheading;
+      $service->main_desc = @$request->maindescription;
+      $service->header_image = @$header_image;
+      $service->service_heading = @$request->serviceheading;
+      $service->service_desc = @$request->servicedesc;
+      $service->box1_heading = @$request->box1heading;
+      $service->box1_desc = @$request->box1desc;
+      $service->box1_image = @$box1image;
+      $service->box2_heading = @$request->box2heading;
+      $service->box2_desc = @$request->box2desc;
+      $service->box2_image = @$box2image;
+      $service->box3_heading = @$request->box3heading;
+      $service->box3_desc = @$request->box3desc;
+      $service->box3_image = @$box3image;
+      $service->box4_heading = @$request->box4heading;
+      $service->box4_desc = @$request->box4desc;
+      $service->box4_image = @$box4image;
+      $service->portfolio_heading = @$request->portfolioheading;
+      $service->portfolio_desc = @$request->portfoliodesc;
+      $service->portfolio_image = @$portfolioimage;
+      $service->portfolio_logo = @$portfoliologo;
+      $service->company_heading = @$request->companyheading;
+      $service->company_desc = @$request->companydesc;
+      $service->choose_heading = @$request->chooseheading;
+      $service->choose_desc = @$request->choosedesc;
+      $service->choose_image = @$chooseimage;
+      $service->process_heading = @$request->processheading;
+      $service->process_desc = @$request->processdesc;
+      $service->category_id = @$request->cateId;
+      $service->sub_category_id = @$request->subcateId;
+      $service->save();
+      return redirect()->back()->with('success', 'Successfully Added!!!');
+      }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}

@@ -11,7 +11,7 @@
                 <div class="media">
                     <div class="media-img-wrap">
                         <div class="avatar">
-                            <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img rounded-circle">
+                            <img src="{{asset('dist/img/avatar12.jpg')}}" alt="user" class="avatar-img rounded-circle">
                         </div>
                         <span class="badge badge-success badge-indicator"></span>
                     </div>
@@ -56,7 +56,7 @@
             <ul class="navbar-nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('home')}}" >
-                        <span class="feather-icon"><i data-feather="activity"></i></span>
+                        <span class="feather-icon"><i data-feather="layout"></i></span>
                         <span class="nav-link-text">Dashboard</span>
                     </a>
                 </li>
@@ -70,35 +70,29 @@
                         <li class="nav-item">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">Slider</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider.image.index')}}">Slider Images</a>
+                                    <a class="nav-link" href="{{route('slider-page')}}">Banner</a>
                                 </li>
                                 {{-- <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">Our Client</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">What We Do</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">Technologies</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">Tech Category</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('slider-page')}}">Award</a>
+                                    <a class="nav-link" href="{{route('slider.image.index')}}">Banner Images</a>
                                 </li> --}}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('wwd.edit')}}">What We Do</a>
+                                </li>
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link" href="{{route('slider-page')}}">Technologies</a>
+                                </li> --}}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('testimonial.index')}}">Testimonial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('award.index')}}">Award</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 @endif
-                {{-- @if(auth()->check() && Auth::user()->sectionCheck('about-us'))
+                @if(auth()->check() && Auth::user()->sectionCheck('about-us'))
                  <li class="nav-item">
                     <a class="nav-link" href="{{route('about-us')}}" >
                         <span class="feather-icon"><i data-feather="activity"></i></span>
@@ -106,22 +100,82 @@
                     </a>
                 </li>
                 @endif
-                @if(auth()->check() && Auth::user()->sectionCheck('blog'))
+                  @if(auth()->check() && Auth::user()->sectionCheck('career'))
                  <li class="nav-item">
-                    <a class="nav-link" href="{{route('blog')}}" >
-                        <span class="feather-icon"><i data-feather="activity"></i></span>
-                        <span class="nav-link-text">Blog</span>
+                    <a class="nav-link" href="{{route('career')}}" >
+                        <span class="feather-icon"><i data-feather="list"></i></span>
+                        <span class="nav-link-text">Career</span>
                     </a>
                 </li>
                 @endif
-                @if(auth()->check() && Auth::user()->sectionCheck('services'))
+                @if(auth()->check() && Auth::user()->sectionCheck('contact-us'))
                  <li class="nav-item">
-                    <a class="nav-link" href="{{route('services')}}" >
-                        <span class="feather-icon"><i data-feather="activity"></i></span>
-                        <span class="nav-link-text">Services</span>
+                    <a class="nav-link" href="{{route('contact-us')}}" >
+                        <span class="feather-icon"><i data-feather="headphones"></i></span>
+                        <span class="nav-link-text">Contact Us</span>
                     </a>
                 </li>
-                @endif --}}
+                @endif
+                @if(auth()->check() && Auth::user()->sectionCheck('blog'))
+                <li class="nav-item">
+                    <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp_blog">
+                        <span class="feather-icon"><span class="badge badge-primary badge-indicator badge-indicator-sm badge-pill"></span><i data-feather="package"></i></span>
+                        <span class="nav-link-text">Blog</span>
+                    </a>
+                    <ul id="app_drp_blog" class="nav flex-column collapse collapse-level-1">
+                        <li class="nav-item">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('category.index')}}">Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('blog-page.index')}}">Blog Page</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{route('blog.index')}}">Blog </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                @endif
+                @if(auth()->check() && Auth::user()->sectionCheck('services'))
+                <li class="nav-item">
+                    <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp_service">
+                        <span class="feather-icon"><span class="badge badge-primary badge-indicator badge-indicator-sm badge-pill"></span><i data-feather="package"></i></span>
+                        <span class="nav-link-text">Services</span>
+                    </a>
+                    <ul id="app_drp_service" class="nav flex-column collapse collapse-level-1">
+                        <li class="nav-item">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('service.category.index')}}">Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('service.subcategory.index')}}">Sub Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('agency.index')}}">Agency Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('agencys.index')}}">Agency</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('services')}}">Service</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                @endif
+                @if(auth()->check() && Auth::user()->sectionCheck('seo'))
+                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('meta.index')}}" >
+                        <span class="feather-icon"><i data-feather="server"></i></span>
+                        <span class="nav-link-text">Meta</span>
+                    </a>
+                </li>
+                @endif
             </ul>
         </div>
     </div>

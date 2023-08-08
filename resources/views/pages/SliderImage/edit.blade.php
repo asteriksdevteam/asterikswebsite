@@ -14,31 +14,41 @@
     <div class="row">
         <div class="col-xl-12">
 <section class="hk-sec-wrapper">
-    <h5 class="hk-sec-title">Update Slider Form</h5>
+    <h5 class="hk-sec-title">Update Image Slider</h5>
     <div class="row">
         <div class="col-sm">
-            <form action="{{route('slider.image.update',$slider->id)}}" method="post">
+            <form action="{{route('slider.image.update',$sliderImg->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <input type="text" value="{{$slider->Name}}" name="name" id="name" class="form-control outline-input mt-15" placeholder="Slider Name">
+                    <label class="mb-0" for="">Select Slider</label>
+                    <select name="imageid" class="form-control custom-select  mt-15">
+                        <option selected="">Select</option>
+                        @foreach($slider as $slider)
+                        <option value="{{$slider->id}}" {{$slider->id == $sliderImg->imageId? 'selected':''}}>{{$slider->Name}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-md-6 form-group">
-                    <input type="text" value="{{$slider->Heading}}" name="heading" id="heading" class="form-control outline-input mt-15" placeholder="Slider Heading">
-                </div>
-                
-                <div class="col-md-6 form-group">
-                    <input type="text" value="{{$slider->MetaTitle}}" name="metatitle"class="form-control outline-input mt-15" placeholder="Meta Title">
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="">Status</label>
-                    <div class="d-flex">
-                    <input type="radio" value="1" {{$slider->Status == 1 ? 'checked' : ''}} class="mx-1" name="status"> Enable
-                    <input type="radio" value="0" {{$slider->Status == 0 ? 'checked' : ''}} class="mx-1" name="status"> Disable
-                    </div>
+                    <label class="mb-0" for="">Image Alt</label>
+                    <input type="text" value="{{$sliderImg->imageAlt}}" name="alt" id="alt" class="form-control outline-input mt-15" placeholder="Slider Image Alt">
                 </div>
                 <div class="col-md-12 form-group">
-                    <textarea class="form-control mt-15" name="description" id="description" rows="3" placeholder="Slider Description">{{$slider->Description}}</textarea>
+                    <label class="mb-0" for="">Image</label>
+                    <input type="file" name="image" class="form-control outline-input mt-15 py-1">
+                </div>
+                <div>
+                    @php
+                        $isImg = explode(".",$sliderImg->imagePath);
+                        $isImg = $isImg[1];
+                    @endphp
+                    @if($isImg != 'mp4')
+                    <img class="mx-25" src="{{asset($sliderImg->imagePath)}}" width="200" alt="{{$sliderImg->imageAlt}}">
+                    @else
+                    <video width="320" class="mx-25" height="240" controls>
+                        <source src="{{asset($sliderImg->imagePath)}}" type="video/mp4">
+                      </video>
+                      @endif
                 </div>
                 <div class="col-md-12 form-group">
                 <button class="btn btn-success float-right" type="submit">Update</button>

@@ -32,7 +32,6 @@
                                     <tr>
                                         <th>Sno</th>
                                         <th>Slider Name</th>
-                                        <th>Thumbnail</th>
                                         <th>Image Alt</th>
                                         <th>Action</th>
                                     </tr>
@@ -42,9 +41,8 @@
                                     <tr>
                                         <td>{{$key+1}}</td>
                                         <td>{{$data->sliderName->Name}}</td>
-                                        <td><img src="{{asset($data->sliderName->sliderImage->imagePath)}}" width="60" alt="{{$data->sliderName->sliderImage->imageAlt}}"></td>
                                         <td>{{$data->imageAlt}}</td>
-                                        <td><a href="{{route('slider.edit',$data->id)}}"><i class="fa fa-edit text-blue"></i></a></td>
+                                        <td><a href="{{route('slider.image.edit',$data->id)}}"><i class="fa fa-edit text-blue"></i></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

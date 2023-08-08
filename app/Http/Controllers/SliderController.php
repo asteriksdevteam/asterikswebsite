@@ -10,7 +10,6 @@ use Str;
 class SliderController extends Controller
 {
   
-
     /**
      * Show the application dashboard.
      *
@@ -18,8 +17,14 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $mainSection = Slider::with('sliderImage')->get();
+        $mainSection = Slider::with('sliderImages')->get();
         return view('pages.slider.slider-page',compact('mainSection'));
+    }
+
+    public function slider($id)
+    {
+        $slider = Slider::with('sliderImages')->find($id);
+        return view('pages.slider.slider-images',compact('slider'));
     }
 
     public function create()
@@ -28,12 +33,13 @@ class SliderController extends Controller
     }
     public function store(Request $request)
     {
+      
       $slider = new Slider();
       $slider->Name = $request->name;
       $slider->Slug = Str::slug($request->name);
       $slider->Heading = $request->heading;
       $slider->Description = $request->description;
-      $slider->MetaTitle = $request->metatitle;
+      // $slider->MetaTitle = $request->metatitle;
       $slider->Status = $request->status;
       $slider->save();
 
@@ -51,7 +57,7 @@ class SliderController extends Controller
       $slider->Slug = Str::slug($request->name);
       $slider->Heading = $request->heading;
       $slider->Description = $request->description;
-      $slider->MetaTitle = $request->metatitle;
+      // $slider->MetaTitle = $request->metatitle;
       $slider->Status = $request->status;
       $slider->save();
 

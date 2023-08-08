@@ -44,20 +44,44 @@ class SliderImageController extends Controller
     }
     public function edit($id)
     {
-      $slider = ImageSlider::find($id);
-      return view('pages.sliderImage.edit',compact('slider'));
+      $slider = Slider::all();
+      $sliderImg = ImageSlider::find($id);
+      return view('pages.sliderImage.edit',compact('sliderImg','slider'));
     }
     public function update($id,Request $request)
     {
       $slider = ImageSlider::find($id);
-      $slider->Name = $request->name;
-      $slider->Slug = Str::slug($request->name);
-      $slider->Heading = $request->heading;
-      $slider->Description = $request->description;
-      $slider->MetaTitle = $request->metatitle;
-      $slider->Status = $request->status;
+      if ($request->hasFile('image')) {
+        $file  = request()->file('image');
+        $SliderImage = trim(time(). "." .$file->getClientOriginalExtension());
+        $file->move('uploads/slider/', $SliderImage);
+        $slider->imagePath = 'uploads/slider/'.$SliderImage;
+      }
+      $slider->imageId = $request->imageid;
+      $slider->imageAlt = $request->alt;
       $slider->save();
 
       return redirect()->route('slider.image.index')->with('success', 'Successfully Updated');
+    }
+    public function updateSlider($id,Request $request)
+    {
+      if ($request->hasFile('image_slider')) {
+        $files  = request()->file('image_slider');
+        foreach($files as $key => $file){
+        $slider = new ImageSlider();
+        $SliderImage = trim($key.time(). "." .$file->getClientOriginalExtension());
+        $file->move('uploads/slider/', $SliderImage);
+        $slider->imageId = $id;
+        $slider->imagePath = 'uploads/slider/'.$SliderImage;
+        $slider->save();
+        }
+      }
+      return redirect()->back();
+    }
+    public function deleteSlider($id)
+    {
+      $slider = ImageSlider::find($id);
+      $slider->delete();
+      return redirect()->back();
     }
 }
