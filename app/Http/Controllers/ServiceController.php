@@ -33,7 +33,6 @@ class ServiceController extends Controller
       $categories =ServiceCategory::get();
       $subcategories = SubCategory::with('getCategory')->get();
       $services =  Service::where('category_id',$request->category)->where('sub_category_id',$request->subcategory)->first();
-     
       return view('service.index',compact('isService','services','cateId','subcateId','categories','subcategories'));
      
     }
@@ -112,6 +111,36 @@ class ServiceController extends Controller
           $file->move('uploads/service/', $chooseimage);
           $chooseimage = 'uploads/service/'.$chooseimage;
         }
+        if ($request->hasFile('tab1image')) {
+          $file  = request()->file('tab1image');
+          $tab1_image = trim('tab1image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $tab1_image);
+          $tab1_image = 'uploads/service/'.$tab1_image;
+        }
+        if ($request->hasFile('tab2image')) {
+          $file  = request()->file('tab2image');
+          $tab2_image = trim('tab2image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $tab2_image);
+          $tab2_image = 'uploads/service/'.$tab2_image;
+        }
+        if ($request->hasFile('tab3image')) {
+          $file  = request()->file('tab3image');
+          $tab3_image = trim('tab3image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $tab3_image);
+          $tab3_image = 'uploads/service/'.$tab3_image;
+        }
+        if ($request->hasFile('tab4image')) {
+          $file  = request()->file('tab4image');
+          $tab4_image = trim('tab4image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $tab4_image);
+          $tab4_image = 'uploads/service/'.$tab4_image;
+        }
+        if ($request->hasFile('tab5image')) {
+          $file  = request()->file('tab5image');
+          $tab5_image = trim('tab5image'.time(). "." .$file->getClientOriginalExtension());
+          $file->move('uploads/service/', $tab5_image);
+          $tab5_image = 'uploads/service/'.$tab5_image;
+        }
       $serviceID = $request->service_id;
       if($serviceID){
       $service = Service::find($serviceID);
@@ -137,6 +166,31 @@ class ServiceController extends Controller
       $service->box4_desc = @$request->box4desc;
       if ($request->hasFile('box4image'))
       $service->box4_image = @$box4image;
+      if ($request->hasFile('tab1image'))
+      $service->tab1_image = @$tab1_image;
+      if ($request->hasFile('tab2image'))
+      $service->tab2_image = @$tab2_image;
+      if ($request->hasFile('tab3image'))
+      $service->tab3_image = @$tab3_image;
+      if ($request->hasFile('tab4image'))
+      $service->tab4_image = @$tab4_image;
+      if ($request->hasFile('tab5image'))
+      $service->tab5_image = @$tab5_image;
+      $service->tab1 = @$request->tab1;
+      $service->tab2 = @$request->tab2;
+      $service->tab3 = @$request->tab3;
+      $service->tab4 = @$request->tab4;
+      $service->tab5 = @$request->tab5;
+      $service->tab1_heading = @$request->tab1heading;
+      $service->tab2_heading = @$request->tab2heading;
+      $service->tab3_heading = @$request->tab3heading;
+      $service->tab4_heading = @$request->tab4heading;
+      $service->tab5_heading = @$request->tab5heading;
+      $service->tab1_desc = @$request->tab1desc;
+      $service->tab2_desc= @$request->tab2desc;
+      $service->tab3_desc = @$request->tab3desc;
+      $service->tab4_desc = @$request->tab4desc;
+      $service->tab5_desc = @$request->tab5desc;
       $service->portfolio_heading = @$request->portfolioheading;
       $service->portfolio_desc = @$request->portfoliodesc;
       if ($request->hasFile('portfolioimage'))
@@ -151,6 +205,12 @@ class ServiceController extends Controller
       $service->choose_image = @$chooseimage;
       $service->process_heading = @$request->processheading;
       $service->process_desc = @$request->processdesc;
+      $service->p1_heading = @$request->p1heading;
+      $service->p1_desc = @$request->p1desc;
+      $service->p2_heading = @$request->p2heading;
+      $service->p2_desc = @$request->p2desc;
+      $service->p3_heading = @$request->p3heading;
+      $service->p3_desc = @$request->p3desc;
       $service->category_id = @$request->cateId;
       $service->sub_category_id = @$request->subcateId;
       $service->save();
@@ -174,6 +234,27 @@ class ServiceController extends Controller
       $service->box4_heading = @$request->box4heading;
       $service->box4_desc = @$request->box4desc;
       $service->box4_image = @$box4image;
+      $service->tab1 = @$request->tab1;
+      $service->tab2 = @$request->tab2;
+      $service->tab3 = @$request->tab3;
+      $service->tab4 = @$request->tab4;
+      $service->tab5 = @$request->tab5;
+      $service->tab1_heading = @$request->tab1heading;
+      $service->tab2_heading = @$request->tab2heading;
+      $service->tab3_heading = @$request->tab3heading;
+      $service->tab4_heading = @$request->tab4heading;
+      $service->tab5_heading = @$request->tab5heading;
+      $service->tab1_desc = @$request->tab1desc;
+      $service->tab2_desc= @$request->tab2desc;
+      $service->tab3_desc = @$request->tab3desc;
+      $service->tab4_desc = @$request->tab4desc;
+      $service->tab5_desc = @$request->tab5desc;
+      $service->tab1_image = @$tab1_image;
+      $service->tab2_image = @$tab2_image;
+      $service->tab3_image = @$tab3_image;
+      $service->tab4_image = @$tab4_image;
+      $service->tab5_image = @$tab5_image;
+
       $service->portfolio_heading = @$request->portfolioheading;
       $service->portfolio_desc = @$request->portfoliodesc;
       $service->portfolio_image = @$portfolioimage;
@@ -185,6 +266,12 @@ class ServiceController extends Controller
       $service->choose_image = @$chooseimage;
       $service->process_heading = @$request->processheading;
       $service->process_desc = @$request->processdesc;
+      $service->p1_heading = @$request->p1heading;
+      $service->p1_desc = @$request->p1desc;
+      $service->p2_heading = @$request->p2heading;
+      $service->p2_desc = @$request->p2desc;
+      $service->p3_heading = @$request->p3heading;
+      $service->p3_desc = @$request->p3desc;
       $service->category_id = @$request->cateId;
       $service->sub_category_id = @$request->subcateId;
       $service->save();

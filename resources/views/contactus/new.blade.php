@@ -63,7 +63,16 @@
                      <label><strong>Upload Image 2</strong></label> 
                      <input type="file" class="form-control" value="{{ $contactus['work_with_image_2'] }}" name="work_with_image_2" placeholder=""  >
                      <img src="{{ asset('uploads/contactus/') }}/{{ $contactus['work_with_image_2'] }}" class="mt-25 w-25">
-                </div>      
+                </div> 
+                <div class="col-md-12 mt-15">
+                     <label><strong>Map longitude </strong></label> 
+                     <input type="text" class="form-control" value="{{ @$contactus['longitude'] }}" name="longitude" placeholder=""   >
+                 </div>
+                 <div class="col-md-12 mt-15">
+                     <label><strong>Map latitude</strong></label> 
+                     <input type="text" class="form-control" value="{{ @$contactus['latitude'] }}" name="latitude" placeholder=""   >
+                 </div>     
+
                 <div class="col-md-12 mt-35 text-lg-right">
                  <button class="btn btn-primary" name="submit_form" type="submit">Submit form</button>
               </div>

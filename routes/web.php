@@ -125,19 +125,6 @@ Route::group(['middleware' => 'permissions:contact-us'], function () {
         Route::get('/get-data', [App\Http\Controllers\ServiceController::class, 'getData'])->name('get-data');
         Route::post('/service/store', [App\Http\Controllers\ServiceController::class, 'store'])->name('service.store');
     });
-    Route::group(['middleware' => 'permissions:service-agency'], function () {
-        Route::get('agency-category/index', [App\Http\Controllers\AgencyCategoryController::class, 'index'])->name('agency.index');
-        Route::get('agency-category/create', [App\Http\Controllers\AgencyCategoryController::class, 'create'])->name('agency.create');
-        Route::post('agency-category/store', [App\Http\Controllers\AgencyCategoryController::class, 'store'])->name('agency.store');
-        Route::get('agency-category/edit/{id}', [App\Http\Controllers\AgencyCategoryController::class, 'edit'])->name('agency.edit');
-        Route::post('agency-category/update/{id}', [App\Http\Controllers\AgencyCategoryController::class, 'update'])->name('agency.update');
-
-        Route::get('agency/index', [App\Http\Controllers\AgencyController::class, 'index'])->name('agencys.index');
-        Route::get('agency/create', [App\Http\Controllers\AgencyController::class, 'create'])->name('agencys.create');
-        Route::post('agency/store', [App\Http\Controllers\AgencyController::class, 'store'])->name('agencys.store');
-        Route::get('agency/edit/{id}', [App\Http\Controllers\AgencyController::class, 'edit'])->name('agencys.edit');
-        Route::post('agency/update/{id}', [App\Http\Controllers\AgencyController::class, 'update'])->name('agencys.update');
-    });
      Route::group(['middleware' => 'permissions:seo'], function () {
         
         Route::get('/meta', [App\Http\Controllers\MetaController::class, 'index'])->name('meta.index');

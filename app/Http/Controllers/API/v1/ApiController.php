@@ -14,6 +14,14 @@ use App\Models\Meta;
 use App\Models\Service;
 use App\Models\Category;
 use App\Models\Career;
+use App\Models\RequestProposal;
+use App\Models\RequestInterview;
+use App\Models\SubCategory;
+use App\Models\BlogPage;
+use App\Models\Testimonial;
+use App\Models\Slider;
+use App\Models\ImageSlider;
+
 class ApiController extends Controller
 {
     public function getAboutUs()
@@ -35,17 +43,17 @@ class ApiController extends Controller
     } 
     public function getServices($cateId ,$subcateId)
     {
-     $cateId = $request->category;
-      $subcateId = $request->subcategory;
+     // $cateId = $request->category;
+      // $subcateId = $request->subcategory;
       $categories =ServiceCategory::get();
       $subcategories = SubCategory::with('getCategory')->get();
-      $services =  Service::where('category_id',$request->category)->where('sub_category_id',$request->subcategory)->first();
+      $services =  Service::where('category_id',$cateId)->where('sub_category_id',$subcateId)->first();
       return $services;
     }  
 
     public function getCareer(Request $request)
       {
-           $career = Service::first();
+           $career = Career::first();
            return $career;
       }  
 
@@ -60,7 +68,7 @@ class ApiController extends Controller
           return $category;
       }
 
-     public function blog()
+     public function getblog()
      {
         $blogs = Blog::with('category')->orderBy('id', 'desc')->get();
         return $blogs;
@@ -81,9 +89,10 @@ class ApiController extends Controller
         $testimonial = Testimonial::get();
         return $testimonial;
      }
-     public function getSlider()
-     {
-        $slider = Slider::get();
+     public function getSlider($slug)
+     {  
+
+        $slider = Slider::with('sliderImages')->where('slug',$slug)->get();
         return $slider;
      }
       public function getImageSlider($slug)
@@ -91,5 +100,33 @@ class ApiController extends Controller
         $imageSlider = ImageSlider::where('slug',$slug)->get();
         return $imageSlider;
      }
+
+     public function postServicesData(Request $request)
+     {
+        $requestdata = $requestArray;
+        $requestProposal = new RequestProposal;
+        $requestProposal->fill($requestdata);
+        $requestProposal->save();
+        if($requestProposal)
+        {
+           return  array('success'=>true);
+        }else
+        {
+            return  array('success'=>false);
+        }
+     }  
+
+     public function postInterviewData(Request $request)
+     {
+        $RequestInterview = $RequestInterview;
+        $requestInterview = new RequestInterview;
+        $requestInterview->fill($requestdata);
+        $requestInterview->save();
+        if($requestInterview){
+            return  array('success'=>true);
+        }else{
+            return  array('success'=>false);
+         }
+    }
 
 }

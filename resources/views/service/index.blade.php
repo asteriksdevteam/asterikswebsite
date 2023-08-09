@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+
 <!-- Container -->
 <div class="container">
    <!-- Title -->
@@ -168,6 +170,117 @@
                             <label class="mb-0" for=""><strong>Image</strong></label>
                             <input type="file" name="box4image" class="form-control outline-input mt-15 py-1">
                          </div>
+                         <div class="col-md-12 mt-15 text-center">
+                           <h3>Agency</h3>
+                        </div>
+                        <div class="col-md-12 mt-15">
+                       <label><strong>Heading</strong></label> 
+                       <input type="text" class="form-control" value="{{ @$services->agency_heading }}" name="agencyheading" placeholder=""   >
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Description</strong></label>                    
+                           <textarea class="form-control"  name="agencydesc"  rows="3" placeholder="" >{{ @$services->agency_desc }}</textarea>
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 1 Name</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab1 }}" name="tab1" placeholder=""   >
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 1 Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab1_heading }}" name="tab1heading" placeholder=""   >
+                            </div>
+                            <div class="col-md-12 mt-15">
+                              <label><strong>Tab 1 Description</strong></label>                    
+                              <textarea class="form-control"  name="tab1desc"  rows="3" placeholder="" >{{ @$services->tab1_desc }}</textarea>
+                           </div>
+                        <div class="col-md-9 mt-15">
+                           <label class="mb-0" for=""><strong>Image</strong></label>
+                           <input type="file" name="tab1image" class="form-control outline-input mt-15 py-1">
+                        </div>
+                        <div class="col-md-3 mt-15">
+                           <label class="mb-0" for=""><strong>Thumbnail</strong></label><br>
+                           <img src="{{asset(@$services->tab1_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 2 Name</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab2 }}" name="tab2" placeholder=""   >
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 2 Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab2_heading }}" name="tab2heading" placeholder=""   >
+                            </div>
+                            <div class="col-md-12 mt-15">
+                              <label><strong>Tab 2 Description</strong></label>                    
+                              <textarea class="form-control"  name="tab2desc"  rows="3" placeholder="" >{{ @$services->tab2_desc }}</textarea>
+                           </div>
+                        <div class="col-md-9 mt-15">
+                           <label class="mb-0" for=""><strong>Image</strong></label>
+                           <input type="file" name="tab2image" class="form-control outline-input mt-15 py-1">
+                        </div>
+                        <div class="col-md-3 mt-15">
+                           <label class="mb-0" for=""><strong>Thumbnail</strong></label><br>
+                           <img src="{{asset(@$services->tab2_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 3 Name </strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab3 }}" name="tab3" placeholder=""   >
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 3 Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab3_heading }}" name="tab3heading" placeholder=""   >
+                            </div>
+                            <div class="col-md-12 mt-15">
+                              <label><strong>Tab 3 Description</strong></label>                    
+                              <textarea class="form-control"  name="tab3desc"  rows="3" placeholder="" >{{ @$services->tab3_desc }}</textarea>
+                           </div>
+                        <div class="col-md-9 mt-15">
+                           <label class="mb-0" for=""><strong>Image</strong></label>
+                           <input type="file" name="tab3image" class="form-control outline-input mt-15 py-1">
+                        </div>
+                        <div class="col-md-3 mt-15">
+                           <label class="mb-0" for=""><strong>Thumbnail</strong></label><br>
+                           <img src="{{asset(@$services->tab3_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 4 Name</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab4 }}" name="tab4" placeholder=""   >
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 4 Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab4_heading }}" name="tab4heading" placeholder=""   >
+                            </div>
+                            <div class="col-md-12 mt-15">
+                              <label><strong>Tab 4 Description</strong></label>                    
+                              <textarea class="form-control"  name="tab4desc"  rows="3" placeholder="" >{{ @$services->tab4_desc }}</textarea>
+                           </div>
+                        <div class="col-md-9 mt-15">
+                           <label class="mb-0" for=""><strong>Image</strong></label>
+                           <input type="file" name="tab4image" class="form-control outline-input mt-15 py-1">
+                        </div>
+                        <div class="col-md-3 mt-15">
+                           <label class="mb-0" for=""><strong>Thumbnail</strong></label><br>
+                           <img src="{{asset(@$services->tab4_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 5 Name</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab5 }}" name="tab5" placeholder=""   >
+                        </div>
+                        <div class="col-md-6 mt-15">
+                           <label><strong>Tab 5 Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->tab5_heading }}" name="tab5heading" placeholder=""   >
+                            </div>
+                            <div class="col-md-12 mt-15">
+                              <label><strong>Tab 5 Description</strong></label>                    
+                              <textarea class="form-control"  name="tab5desc"  rows="3" placeholder="" >{{ @$services->tab5_desc }}</textarea>
+                           </div>
+                        <div class="col-md-9 mt-15">
+                           <label class="mb-0" for=""><strong>Image</strong></label>
+                           <input type="file" name="tab5image" class="form-control outline-input mt-15 py-1">
+                        </div>
+                        <div class="col-md-3 mt-15">
+                           <label class="mb-0" for=""><strong>Thumbnail</strong></label><br>
+                           <img src="{{asset(@$services->tab5_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
+                        </div>
                         <div class="col-md-12 mt-15 text-center">
                            <h3>Portfolio</h3>
                         </div>
@@ -199,10 +312,10 @@
                             <label><strong>Heading (company)</strong></label> 
                             <input type="text" class="form-control" value="{{ @$services->company_heading }}" name="companyheading" placeholder=""   >
                          </div>
-                             <div class="col-md-12 mt-15">
-                                <label><strong>Description (company)</strong></label>                    
-                                <textarea class="form-control"  name="fcompanydesc"  rows="3" placeholder="" >{{ @$services->company_desc }}</textarea>
-                             </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Description (company)</strong></label>                    
+                           <textarea class="form-control"  name="fcompanydesc"  rows="3" placeholder="" >{{ @$services->company_desc }}</textarea>
+                        </div>
                              
                         <div class="col-md-12 mt-15 text-center">
                            <h3>Choose Service</h3>
@@ -224,7 +337,7 @@
                            <img src="{{asset(@$services->choose_image?? 'images/no_img.png')}}" alt="" width="150" height="80">
                         </div>
                         <div class="col-md-12 mt-15 text-center">
-                           <h3>Our Proccess</h3>
+                           <h3>Our Process</h3>
                         </div>
                         <div class="col-md-12 mt-15">
                            <label><strong>Heading</strong></label> 
@@ -234,6 +347,39 @@
                            <label><strong>Description</strong></label>                    
                            <textarea class="form-control"  name="processdesc"  rows="3" placeholder="" >{{ @$services->choose_desc }}</textarea>
                         </div>
+                        <div class="col-md-12 mt-15 text-center">
+                           <h3>Process One</h3>
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->p1_heading }}" name="p1heading" placeholder=""   >
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <textarea class="w-100 form-control ckeditor" id="ckeditor" rows="10" cols="20" name="p1desc" placeholder="Enter process List">{{ @$services->p1_desc }}</textarea>
+                        </div>
+                        <div class="col-md-12 mt-15 text-center">
+                           <h3>Process Two</h3>
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->p2_heading }}" name="p2heading" placeholder=""   >
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Description</strong></label>
+                           <textarea class="w-100 form-control ckeditor" id="ckeditor" rows="10" cols="20" name="p2desc" placeholder="Enter process List">{{ @$services->p2_desc }}</textarea>
+                        </div>
+                        <div class="col-md-12 mt-15 text-center">
+                           <h3>Process Three</h3>
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Heading</strong></label> 
+                           <input type="text" class="form-control" value="{{ @$services->p3_heading }}" name="p3heading" placeholder=""   >
+                        </div>
+                        <div class="col-md-12 mt-15">
+                           <label><strong>Description</strong></label>
+                           <textarea class="w-100 form-control ckeditor" id="ckeditor" rows="10" cols="20" name="p3desc" placeholder="Enter process List">{{ @$services->p3_desc }}</textarea>
+                        </div>
+
                         <div class="col-md-12 mt-35 text-lg-right">
                            <button class="btn btn-primary" name="submit_form" type="submit">Update</button>
                         </div>

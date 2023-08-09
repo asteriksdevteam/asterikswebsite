@@ -155,12 +155,6 @@
                                     <a class="nav-link" href="{{route('service.subcategory.index')}}">Sub Category</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('agency.index')}}">Agency Category</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('agencys.index')}}">Agency</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('services')}}">Service</a>
                                 </li>
                             </ul>
