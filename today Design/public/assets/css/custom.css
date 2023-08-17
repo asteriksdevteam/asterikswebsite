@@ -30,13 +30,13 @@ section
     background: rgba(0, 0, 0, 0.20);
     z-index: 100;
 }
-.desktopmenu .nav-link
+.desktopmenu a
 {
     color:#fff;
     margin-right:20px;
     text-transform: capitalize !important;
 }
-.desktopmenu .nav-link:hover
+.desktopmenu a:hover
 {
     color:#F2735B;
 }
@@ -48,15 +48,15 @@ header.desktopmenu.scrolled
 {
     background: #fff !important;
 }
-header.desktopmenu.scrolled .nav-link.show {
+header.desktopmenu.scrolled a.show {
     color: #000 !important;
 }
-header.desktopmenu.scrolled .nav-link
+header.desktopmenu.scrolled a
 {
     color:#000;
     text-transform: capitalize;
 }
-header.desktopmenu.scrolled .nav-link:last-child
+header.desktopmenu.scrolled a:last-child
 {
     margin-right:0px;
 }
@@ -88,9 +88,10 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 {
     position: unset;
 }
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show
+.navbar-nav a
 {
     color:#fff !important;
+    text-decoration: none;
 }
 .dropdown-menu[data-bs-popper] 
 {
@@ -586,8 +587,8 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
     background:transparent !important;
 }
 .tw {
-    width: 50%;
-    height:5em;
+    width: 65px;
+    height:65px;
 }
 
 /*awards-section*/
@@ -1269,7 +1270,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
     margin:0 auto 40px !important;
     justify-content: space-between !important;
 }
-.blogtabs .nav-link
+.blogtabs a
 {
     border:0px !important;
     text-transform: capitalize;
@@ -1277,11 +1278,11 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-.blogtabs .nav-link:hover
+.blogtabs a:hover
 {
     color:#F2735B !important;
 }
-.blogtabs .nav-link.active
+.blogtabs a.active
 {
     border-bottom:2px solid #F2735B !important;
     color:#F2735B !important;
@@ -1884,7 +1885,7 @@ textarea:focus
         width: 50%;
         margin-bottom: 10px;
     }
-    .blogtabs .nav-link
+    .blogtabs a
     {
         text-align: center;
         width: 100%;
@@ -2268,7 +2269,7 @@ textarea:focus
         display: block;
         margin: auto;
     }
-    .blogtabs .nav-link
+    .blogtabs a
     {
         padding:0px;
     }

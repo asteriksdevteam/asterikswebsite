@@ -52,8 +52,8 @@ function OffcanvasExample() {
        <header className='desktopmenu'>
             <Navbar expand={targetExpand}>
                 <Container>
-                <Navbar.Brand href="#" className='whitelogo'> <img src='/assets/images/whitelogo.svg' width={140} height={50} alt='' /> </Navbar.Brand>
-                <Navbar.Brand href="#" className='logo'><img src='/assets/images/logo.svg' width={140} height={50} alt='' /></Navbar.Brand>
+                <Navbar.Brand href="/" className='whitelogo'> <img src='/assets/images/whitelogo.svg' width={140} height={50} alt='' /> </Navbar.Brand>
+                <Navbar.Brand href="/" className='logo'><img src='/assets/images/logo.svg' width={140} height={50} alt='' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${targetExpand}`} />
                 <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-${targetExpand}`}
@@ -62,13 +62,13 @@ function OffcanvasExample() {
                 >
                     <Offcanvas.Header closeButton>
                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${targetExpand}`}>
-                    <Navbar.Brand href="#" className='whitelogo'><img src='/assets/images/logo.svg' width={140} height={50} alt='' /></Navbar.Brand>
+                    <Navbar.Brand href="/" className='whitelogo'><img src='/assets/images/logo.svg' width={140} height={50} alt='' /></Navbar.Brand>
                     </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                     <Nav className="justify-content-end align-items-center flex-grow-1 pe-3">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/about">About</Nav.Link>
+                        <Link href="/">Home</Link>
+                        <Link href="/about">About</Link>
                         <NavDropdown
                         title="Service" 
                         id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
@@ -178,11 +178,11 @@ function OffcanvasExample() {
                             </div>
 
                         </NavDropdown>
-                        <Nav.Link href="/career">Careers</Nav.Link>
-                        {/* <Nav.Link href="/blog">Blog</Nav.Link> */}
-                        <Nav.Link href="/contact">contact</Nav.Link>
-                        <Nav.Link href="#">+92 320-095-0682</Nav.Link>
-                        <Nav.Link href="#" className='estimate'>Estimate Project</Nav.Link>
+                        <Link href="/career">Careers</Link>
+                        {/* <Link href="/blog">Blog</Link> */}
+                        <Link href="/contact">contact</Link>
+                        <Link href="#">+92 320-095-0682</Link>
+                        <Link href="#" className='estimate'>Estimate Project</Link>
                     </Nav>
                     
                     </Offcanvas.Body>

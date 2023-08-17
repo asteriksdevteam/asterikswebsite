@@ -81,7 +81,7 @@ export default function Technologies()
                                 </Col>
                             </Row>
                         </Tab>
-                        <Tab eventKey='databse' title='databse'>
+                        <Tab eventKey='database' title='database'>
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
