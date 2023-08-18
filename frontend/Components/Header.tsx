@@ -9,7 +9,9 @@ import { faAngleDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() 
 {
-
+  type ServiceSubCategory = {
+    name: string;
+  };
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggleClick = () => {
@@ -20,7 +22,9 @@ export default function Header()
     e.stopPropagation();
   };
 
-  const [isMenuOpen, setMenuOpen] = useState(false);
+        const [data, setData] = useState([]);
+        const [loading, setLoading] = useState(false);
+        const [error, setError] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +46,33 @@ export default function Header()
       };
     }
   }, []);
+  useEffect(() => {
+    // set loading to true before calling fetch
+    setLoading(true);
+
+    fetch(`https://asteriksdigital.com/admin/api/getServices/1/1`)
+    
+      .then(async (res) => {
+        // set the data if the response is successful
+        const todo1 = await res.json();
+        console.log(todo1);
+        
+        setData(todo1);
+
+        console.log(data);
+
+      })
+      .catch((e) => {
+        // set the error if there's an error like 404, 400, etc
+        if (e instanceof Error) {
+          setError(e.message);
+        }
+      })
+      .finally(() => {
+        // set loading to false after everything has completed.
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <>
@@ -61,7 +92,7 @@ export default function Header()
                       <div className='toggle'>
                         <FontAwesomeIcon icon={faTimes} onClick={handleToggleClick} />
                       </div>
-                      <div className='collapse-menu'>
+                      {/* <div className='collapse-menu'>
                         <ul>
                           <li><Link href='/'>home </Link></li>
                           <li><Link href='/about'>about </Link></li>
@@ -78,16 +109,7 @@ export default function Header()
                                           <div className='menu-content mt-3'>
                                             <ul>
                                               <li><Link className="dropdown-item" href="/service">SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">PPC</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Social Media Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Search Engine Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Video Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">E-Commerce Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Content Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Email Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Small Business SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Local SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Google ADS</Link></li>
+                                              
                                             </ul>
                                           </div>
                                         </Col>
@@ -178,7 +200,7 @@ export default function Header()
                           <li><Link href='#'>+92 320-095-0682 </Link></li>
                           <li><Link href='#'>Estimate Project </Link></li>
                         </ul>
-                      </div>
+                      </div> */}
                     </nav>
                   </Container>
                 </div>
@@ -198,70 +220,90 @@ export default function Header()
                                       <Row>
                                         <Col lg={3} md={3}>
                                           <div className='menu-widget'>
-                                              <h5>Digital Marketing</h5>
+                                          {data.map(categoryData => (
+                                            categoryData.id == 1 ?
+                                              <h5>{categoryData.name}</h5>
+                                              :''
+                                          ))}
                                           </div>
                                           <div className='menu-content mt-3'>
+                                        
                                             <ul>
-                                              <li><Link className="dropdown-item" href="/service">SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">PPC</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Social Media Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Search Engine Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="/service">Video Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">E-Commerce Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Content Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Email Marketing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Small Business SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Local SEO</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Google ADS</Link></li>
+                                            {data.map(categoryData => (
+                                                <>
+                                                {categoryData['sub_category'] && categoryData['sub_category'].map(item => (
+                                                  item.category_id == 1 ?
+                                                    <li key={item.id+Math.random()}><Link className="dropdown-item" href="#">{item.name}</Link></li>
+                                                : ''
+                                                  ))}
+                                                </>
+                                            ))}
                                             </ul>
                                           </div>
                                         </Col>
                                         <Col lg={3} md={3}>
                                           <div className='menu-widget'>
-                                              <h5>Content Services</h5>
+                                          {data.map(categoryData => (
+                                            categoryData.id == 2 ?
+                                              <h5>{categoryData.name}</h5>
+                                              :''
+                                          ))}
                                           </div>
                                           <div className='menu-content mt-3'>
                                             <ul>
-                                            <li><Link className="dropdown-item" href="#">Articles Writing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Blog Management</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Premium Web Copywriting</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Web Content Services</Link></li>
-                                              <li><Link className="dropdown-item" href="#">E-book Writing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Book Writing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Guest Blog Writing & Publishing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Business Plan Writing Packages</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Custom Online Press Release Writing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Online Presentation</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Business Proposal Writing</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Newsletter</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Recommendation Letter & Biography</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Speech Writing</Link></li>
+                                            {data.map(categoryData => (
+                                                <>
+                                                {categoryData['sub_category'] && categoryData['sub_category'].map(item => (
+                                                  item.category_id == 2 ?
+                                                    <li key={item.id+Math.random()}><Link className="dropdown-item" href="">{item.name}</Link></li>
+                                                : ''
+                                                  ))}
+                                                </>
+                                            ))}
                                             </ul>
                                           </div>
                                         </Col>
                                         <Col lg={3} md={3}>
                                         <div className='menu-widget'>
-                                              <h5>IT Services</h5>
+                                        {data.map(categoryData => (
+                                            categoryData.id == 3 ?
+                                              <h5>{categoryData.name}</h5>
+                                              :''
+                                          ))}
                                           </div>
                                           <div className='menu-content mt-3'>
                                             <ul>
-                                              <li><Link className="dropdown-item" href="#">Hosting</Link></li>
-                                              <li><Link className="dropdown-item" href="#">IT Consultation and <br/>  Implementation</Link></li>
+                                            {data.map(categoryData => (
+                                                <>
+                                                {categoryData['sub_category'] && categoryData['sub_category'].map(item => (
+                                                  item.category_id == 3 ?
+                                                    <li key={item.id+Math.random()}><Link className="dropdown-item" href="#">{item.name}</Link></li>
+                                                : ''
+                                                  ))}
+                                                </>
+                                            ))}
                                             </ul>
                                           </div>
                                         </Col>
                                         <Col lg={3} md={3}>
                                           <div className='menu-widget'>
-                                              <h5>Design & Development</h5>
+                                          {data.map(categoryData => (
+                                            categoryData.id == 4 ?
+                                              <h5>{categoryData.name}</h5>
+                                              :''
+                                          ))}
                                           </div>
                                           <div className='menu-content mt-3'>
                                             <ul>
-                                              <li><Link className="dropdown-item" href="#">Website Development</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Mobile App Development</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Creative Logo Design</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Website Template Design</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Mobile App UI UX</Link></li>
-                                              <li><Link className="dropdown-item" href="#">Branding</Link></li>
+                                            {data.map(categoryData => (
+                                                <>
+                                                {categoryData['sub_category'] && categoryData['sub_category'].map(item => (
+                                                  item.category_id == 4 ?
+                                                    <li key={item.id+Math.random()}><Link className="dropdown-item" href="#">{item.name}</Link></li>
+                                                : ''
+                                                  ))}
+                                                </>
+                                            ))}
                                             </ul>
                                             
                                           </div>
