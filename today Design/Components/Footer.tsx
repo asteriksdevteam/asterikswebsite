@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import Link from 'next/link'
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 
@@ -43,9 +44,9 @@ export default function Footer() {
                     <div className="widget"><h5>Company</h5></div>
                     <div className="footer-lst">
                       <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/career">Career</a></li>
-                        <li><a href="#">Become Investor</a></li>
+                        <li><Link href="/about">About Us</Link></li>
+                        <li><Link href="/career">Career</Link></li>
+                        <li><Link href="#">Become Investor</Link></li>
                       </ul>
                     </div>
                   </div>
