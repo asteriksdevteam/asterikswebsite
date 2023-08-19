@@ -12,17 +12,17 @@ export default function Footer() {
             <Row className="align-items-center upperfooter">
               <Col lg={3} md={3}>
                 <div className="footer-content">
-                  <a className="footer-logo" href="#"><img src="/assets/images/logo.png" width={190} height={70} alt="" /></a>
+                  <Link className="footer-logo" href="#"><img src="/assets/images/logo.png" width={190} height={70} alt="" /></Link>
                   <p>We are an agency that embraces change and delivers above expectations. We provide a wide range of services that are tailored to your unique needs.</p>
                   <ul>
                     <li>
-                      <a target="_blank" href="https://www.facebook.com/asteriksdigital"><img src="/assets/images/facebook.png" width={70} height={70} alt="" /></a>
+                      <Link target="_blank" href="https://www.facebook.com/asteriksdigital"><img src="/assets/images/facebook.png" width={70} height={70} alt="" /></Link>
                     </li>
                     <li>
-                      <a target="_blank" href="https://twitter.com/AsteriksDigital"><img src="/assets/images/twitter.png" width={70} height={70} alt="" /></a>
+                      <Link target="_blank" href="https://twitter.com/AsteriksDigital"><img src="/assets/images/twitter.png" width={70} height={70} alt="" /></Link>
                     </li>
                     <li>
-                      <a target="_blank" href="https://www.linkedin.com/company/asteriks-digital-experts"><img src="/assets/images/linkedin.png" width={70} height={70} alt="" /></a>
+                      <Link target="_blank" href="https://www.linkedin.com/company/asteriks-digital-experts"><img src="/assets/images/linkedin.png" width={70} height={70} alt="" /></Link>
                     </li>
                   </ul>
                 </div>
@@ -33,10 +33,10 @@ export default function Footer() {
                     <div className="widget"><h5>What We Do</h5></div>
                     <div className="footer-lst">
                       <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">App Design</a></li>
-                        <li><a href="#">Social Media Manage</a></li>
-                        <li><a href="#">Market Analysis Project</a></li>
+                        <li><Link href="/service/seo">Digital Marketing</Link></li>
+                        <li><Link href="/service/articles-writing">Content Services</Link></li>
+                        <li><Link href="/service/hosting">IT Services</Link></li>
+                        <li><Link href="/service/website-development">Design & Development</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -46,7 +46,7 @@ export default function Footer() {
                       <ul>
                         <li><Link href="/about">About Us</Link></li>
                         <li><Link href="/career">Career</Link></li>
-                        <li><Link href="#">Become Investor</Link></li>
+                        {/* <li><Link href="#">Become Investor</Link></li> */}
                       </ul>
                     </div>
                   </div>
@@ -54,9 +54,9 @@ export default function Footer() {
                     <div className="widget"><h5>Support</h5></div>
                     <div className="footer-lst">
                       <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Policy</a></li>
-                        <li><a href="#">Business</a></li>
+                        <li><Link href="/contact">FAQ</Link></li>
+                        <li><Link href="/about">Policy</Link></li>
+                        {/* <li><Link href="#">Business</Link></li> */}
                       </ul>
                     </div>
                   </div>
@@ -64,8 +64,8 @@ export default function Footer() {
                     <div className="widget"><h5>Contact</h5></div>
                     <div className="footer-lst">
                       <ul>
-                        <li><a href="#">WhatsApp</a></li>
-                        <li><a href="#">Support 24</a></li>
+                        <li><Link href="#">WhatsApp</Link></li>
+                        <li><Link href="#">Support 24/5</Link></li>
                       </ul>
                     </div>
                   </div>

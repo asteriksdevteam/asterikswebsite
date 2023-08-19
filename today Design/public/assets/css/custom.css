@@ -36,6 +36,12 @@ section
     margin-right:20px;
     text-transform: capitalize !important;
 }
+.desktopmenu .navbar-nav a.estimate
+{
+    border-radius: 100px;
+    background:#F2735B;
+    padding: 16px 40px;
+}
 .desktopmenu a:hover
 {
     color:#F2735B;
@@ -48,8 +54,8 @@ header.desktopmenu.scrolled
 {
     background: #fff !important;
 }
-
-header.desktopmenu.scrolled a.show {
+header.desktopmenu.scrolled a.show 
+{
     color: #000 !important;
 }
 header.desktopmenu.scrolled a
@@ -273,7 +279,7 @@ header.desktopmenu.scrolled .menu-content ul li a
 .hekpbusiness-section
 {
     position: relative;
-    padding:140px 0 80px;
+    padding:40px 0 80px;
 }
 .title 
 {
@@ -528,8 +534,6 @@ header.desktopmenu.scrolled .menu-content ul li a
 .blog4-content
 {
     position: relative;
-    padding: 54px 70px;
-
 }
 .blog4-content:before {
 
@@ -631,6 +635,7 @@ header.desktopmenu.scrolled .menu-content ul li a
 .testimonial-section
 {
     position: relative;
+    overflow: hidden;
     /* background:url('/assets/images/testimonialbg.png') center no-repeat;
     background-size: cover; */
     padding:0px;
@@ -702,6 +707,7 @@ header.desktopmenu.scrolled .menu-content ul li a
 }
 .bigtitle
 {
+    position: absolute;
     color:#000;
     font-weight: 400;
     margin-left:16px;
@@ -1443,7 +1449,19 @@ textarea:focus
     border-bottom-right-radius: 24px;
 }
 
-@media(max-width:1031px)
+/*modal*/
+
+.modal-cform .orangebtn
+{
+    width: fit-content;
+    border: 0px;
+    padding:15px 50px;
+}
+.cmodal-header
+{
+    border-bottom:0px !important;
+}
+/* @media(max-width:1031px)
 {
     
     .homebanner 
@@ -1596,185 +1614,113 @@ textarea:focus
         font-size: 50px;
     }
     
-}
-@media(max-width:1024px)
+} */
+
+@media(max-width:1366px)
 {
-    .homebanner 
+    .homebanner-cnt
     {
-        height: 100vh;
-        overflow-x: hidden;
+        max-width: 60rem;
+        min-width: 60rem;
+        width: 60rem;
+        margin: auto;
     }
-    section.hekpbusiness-section
+    .homebanner .containercenter 
     {
-        padding-top:81px !important;
+        left: 55%;
     }
-    section.homebanner .containercenter 
+    .hekpbusiness-section 
     {
-        left: 57% !important;
+        padding: 30px 0 80px;
     }
-    .contactbanner
+    .aboutsection 
     {
-        min-height: 100vh;
-    }
-    .contactbanner-rightcontent
-    {
-        padding: 97px 15px;
-    }
-    .contactbanner:after
-    {
-        min-height: 77vh;
-    }
-    .aboutsection
-    {
-        overflow: hidden;
-        padding-bottom:120px;
+        padding-bottom: 90px;
     }
     .aboutsection:before 
     {
-        width: 587px;
-        height: 361px;
+        width: 60rem;
+        height: 32rem;
     }
-    .aboutsection-content
+    .clientlogos-section
     {
-        padding-bottom:0px;
+        position: relative;
+        margin-top: -136px;
     }
-    .aboutsection-inntercontent 
+    .clientlogos-leftcontent:before
     {
-        width: 470px;
+        width:437px;
     }
-    .aboutsection-content:before 
+    .aboutsection:before
     {
-        height: 357px;
+        width: 715px;
+        height: 418px;
     }
     .blog2 
     {
-        padding: 66px 48px;
+        padding: 78px 48px;
     }
-    .blog4-content {
-        padding: 18px 70px;
-    }
-    .contactsection .form 
+    .blog3-content 
     {
-        transform: scale(1);
+        padding: 146px 70px;
     }
-    .contactsection:before 
-    {
-        top: 56px;
-        width: 745px;
-        height: 611px;
-        background-size: cover;
-    }
-    .processlist li
-    {
-        font-size: 13px;
-    }
-    .processbox:before 
-    {
-        left: 134px;
-        width: 188px;
-    }
-    .numberbox h1
-    {
-        font-size: 90px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img 
-    {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .company
-    {
-        max-width: 100%;
-    }
-    .ourwork-section:before
-    {
-        width: 548px;
-        top: 265px;
-    }
-    .whychoose-section 
-    {
-        margin-top: 60px;
-    }
-    .clientlogos-leftcontent:before 
-    {
-        left: 60%;
-        width: 349px;
-    }
-    .hekpbusiness-section
-    {
-        overflow-x: hidden;
-    }
-    .blogsection
-    {
-        overflow-x: hidden;
-    }
-    .testimonial-section
-    {
-        overflow-x: hidden;
-    }
-    .awards-section
-    {
-        overflow-x: hidden;
+    .blog4-innercontent {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 66px 45px;
     }
     .comaquote 
     {
-        right: 14px;
-        width: 227px !important;
+        right: 90px;
     }
-    .title 
+    .testimonial-item p 
     {
-        font-size: 24px;
+        height: 6rem;
     }
-    .tw {
-        width: 65%;
-        height: 4em;
-    }
-    .testimonial-carousel .owl-nav {
-        left: 12% !important;
-    }
-    .testimonial-carousel .owl-nav
+    .testimonial-carousel .owl-nav 
     {
-        width: 32%; 
-        bottom: 15%;
+        left: 17%;
+        width: 30%;
+        bottom: 6%;
     }
     .bigtitle 
     {
-        margin-left: 12px;
+        left: 11% ;
+        top: 70% ;
     }
-    .bigtitle span 
+    .contactbanner 
     {
-        font-size: 50px;
+        min-height: 139vh;
     }
 }
-@media(max-width:1600px)
+@media(min-width:1600px)
 {
-    body{
-        overflow-x: hidden;
-    }
     .homebanner
     {
         overflow-x: hidden;
     }
-    section.homebanner .containercenter 
+    .homebanner .containercenter 
     {
-        left: 50%;
+        left: 55%;
     }
     .aboutsection
     {
         overflow-x: hidden;
+        padding-bottom: 90px;
+    }
+    .aboutsection:before 
+    {
+        width: 60rem;
+        height: 32rem;
     }
     .testimonial-section
     {
         overflow-x: hidden;
     }
-    .testimonial-carousel .owl-nav
+    .testimonial-carousel .owl-nav 
     {
-        left:15%;
+        left: 17%;
     }
     .hekpbusiness-section
     {
@@ -1796,13 +1742,143 @@ textarea:focus
     {
         min-height: 66vh;
     }
+    .hekpbusiness-section 
+    {
+        padding: 30px 0 80px;
+    }
+    .clientlogos-section
+    {
+        position: relative;
+        margin-top: -136px;
+    }
+    .comaquote 
+    {
+        right: 142px;
+    }
+    .testimonial-item p 
+    {
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 16%;
+        width: 24%;
+        bottom: 5%;
+    }
+    .bigtitle 
+    {
+        left: 11%;
+        top: 70%;
+    }
+    .blog4-innercontent {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 54px 45px;
+    }
+    .contactbanner 
+    {
+        min-height: 139vh;
+    }
 }
-@media(max-width:576px)
+/* @media(max-width:1024px)
 {
-    body
+    body{
+        overflow: hidden;
+    }
+    .homebanner
     {
         overflow-x: hidden;
     }
+    section.homebanner .containercenter 
+    {
+        left: 50%;
+    }
+    .aboutsection
+    {
+        overflow-x: hidden;
+        padding-bottom: 90px;
+    }
+    .aboutsection:before 
+    {
+        width: 625px;
+        height: 380px;
+    }
+    .aboutsection-inntercontent p 
+    {
+        font-size: 13px;
+    }
+    .aboutsection-inntercontent 
+    {
+        width: 30rem;
+    }
+    .testimonial-section
+    {
+        overflow-x: hidden;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 17%;
+    }
+    .hekpbusiness-section
+    {
+        overflow-x: hidden;
+    }
+    .blogsection
+    {
+        overflow-x: hidden;
+    }
+    .aboutbanner-section
+    {
+        overflow-x: hidden;
+    }
+    .contactbanner {
+        position: relative;
+        min-height: 100vh;
+    }
+    .contactbanner:after
+    {
+        min-height: 66vh;
+    }
+    .hekpbusiness-section 
+    {
+        padding: 30px 0 80px;
+    }
+    .clientlogos-section
+    {
+        position: relative;
+        margin-top: -136px;
+    }
+    .comaquote 
+    {
+        right: 142px;
+    }
+    .testimonial-item p 
+    {
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav
+    {
+        left:16%;
+        width: 24%;
+        bottom: -4%;
+    }
+    .bigtitle 
+    {
+        left: 11%;
+        top: 79%;
+    }
+    .blog3-content 
+    {
+        padding: 146px 70px;
+    }
+    .blog4-innercontent 
+    {
+        padding: 54px 45px;
+    }
+} */
+@media(max-width:576px)
+{
     .title
     {
         font-size: 25px !important;
@@ -2206,35 +2282,55 @@ textarea:focus
     {
         font-size: 13px;
     }
-    .bigtitle
-    {
-        margin-left: 37px; 
-    }
     .bigtitle span 
     {
         font-size: 40px;
     }
 
 }
-@media(max-width:1366px)
+@media (min-width:1900px)
 {
-    .clientlogos-leftcontent:before
+    body
     {
-        width:437px;
+        overflow-x: hidden;
     }
-    .aboutsection:before
+    .testimonial-item p 
     {
-        width: 715px;
-        height: 418px;
+        height: 6rem;
     }
-    .blog2 
+    .testimonial-carousel .owl-nav
     {
-        padding: 78px 48px;
+        left:23%;
+        width: 25%;
+        bottom: -4%;
+    }
+    .bigtitle 
+    {
+        left: 19%;
+        top: 79%;
     }
 }
-@media(max-width:768px)
+@media(min-width:768px) and (max-width:1024px)
 {
-    
+    .bannerheading 
+    {
+        font-size: 30px;
+    }
+    .bannertext
+    {
+        font-size: 13px;
+    }
+    .homebanner-tabcnt 
+    {
+        max-width: 35rem;
+        min-width: 35rem;
+        margin: auto;
+    }
+    .orangebtn 
+    {
+        font-size: 13px;
+        padding: 15px 33px;
+    }
     .contactbanner-rightcontent 
     {
         padding: 144px 15px;
@@ -2242,27 +2338,38 @@ textarea:focus
     .aboutsection
     {
         overflow: hidden;
-    }
-    .aboutsection:before 
-    {
-        width: 587px;
-        height: 361px;
+        padding-bottom: 70px;
     }
     .aboutsection-inntercontent 
     {
-        width: 290px;
+        width: 15rem;
     }
-    .aboutsection-content:before
+    .aboutsection-inntercontent p 
     {
-        height: 420px;
+        font-size: 13px;
+    }
+    .aboutsection:before 
+    {
+        top: -139px;
+        width: 587px;
+        height: 44rem;
+    }
+    .aboutsection-content:before 
+    {
+        width: 587px;
+        height: 33rem;
     }
     .title
     {
-        font-size: 30px;
+        font-size: 22px;
     }
     .subtitle
     {
         font-size: 19px;
+    }
+    .clientlogos-section 
+    {
+        margin-top: -139px;
     }
     .clientlogos-leftcontent:before 
     {
@@ -2331,41 +2438,20 @@ textarea:focus
         min-height: 400px;
         object-fit: revert;
     }
-    .blog4-content 
+    .blogsection p
     {
-        padding: 0 70px;
+        font-size: 13px;
     }
-    .blog4-content:before 
+    .blog4-innercontent 
     {
-        height: -webkit-fill-available;
-    }
-    .blog1 
-    {
-        background-size: cover;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 42px 45px;
     }
     .blog2 
     {
-        padding: 12px 48px;
-    }
-    .blog1-content h3
-    {
-        font-size: 16px;
-    }
-    .blog3-content
-    {
-        padding:0px;
-    }
-    .blog4-content 
-    {
-        padding: 12px 40px;
-    }
-    .blog1 p
-    {
-        font-size: 13px;
-    }
-    .blog1-content p
-    {
-        font-size: 13px;
+        padding: 42px 48px;
     }
     .p0
     {
@@ -2382,5 +2468,29 @@ textarea:focus
     .ourprocess-section
     {
         padding-bottom: 0px;
+    }
+    .testimonial-item p 
+    {
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 17%;
+        width: 43%;
+        bottom: 0%;
+    }
+    .testimonial-item p 
+    {
+        height: 9rem;
+    }
+    .bigtitle 
+    {
+        left: 7% !important;
+        top: 79% !important;
+    }
+    .comaquote 
+    {
+        right: 25px;
+        width: 214px !important;
     }
 }

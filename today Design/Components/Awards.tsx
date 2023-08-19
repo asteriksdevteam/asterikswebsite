@@ -43,7 +43,7 @@ export default function Awards()
                         <p className='desc'>Sit lectus tincidunt mi quis nunc. Ut libero morbi fermentum nulla tincidunt aliquam malesuada eget nulla. Vitae semper urna et egestas vitae posuere elementum tellus. </p>
                     </Col>
                 </Row>  
-                <Row className='mt-3'>
+                <Row>
                     <OwlCarousel className='awards-carousel owl-theme' {...awardsbanner}>
                         <div className='item'>
                             <div className='award-item'>

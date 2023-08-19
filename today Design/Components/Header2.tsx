@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
-import { Container, Row } from 'react-bootstrap';
+import { Container,Row, Col, Modal, Button } from 'react-bootstrap'
 import Link from 'next/link';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -64,6 +63,10 @@ function OffcanvasExample() {
       setMenuData(data);
     });
   }, []);
+
+  const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
 
   return (
     <>
@@ -147,8 +150,8 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
 <Link href="/career">Careers</Link>
 {/* <Link href="/blog">Blog</Link> */}
 <Link href="/contact">contact</Link>
-<Link href="#">+92 320-095-0682</Link>
-<Link href="#" className='estimate'>Estimate Project</Link>
+{/* <Link href="#">+92 320-095-0682</Link> */}
+<Link href="#" className='estimate' onClick={handleShow}>Estimate Project</Link>
 </Nav>
 
 </Offcanvas.Body>
@@ -157,6 +160,47 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
 </Navbar>
       </header>
       {/* ... Rest of your JSX code */}
+
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton className='cmodal-header'>
+          <Modal.Title>Apply For An Opening Position Now</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <div className='modal-cform'>
+              <form action="#">
+                  <Row className='gx-3'>
+                      <Col lg={6}>
+                          <input type="text" placeholder='Name*' className='form-control' required/>
+                      </Col>
+                      <Col lg={6}>
+                          <input type="text" placeholder='Email*' className='form-control' required/>
+                      </Col>
+                  </Row>
+                  <Row className='gx-3'>
+                      <Col lg={6}>
+                          <input type="text" placeholder='phone*' className='form-control' required/>
+                      </Col>
+                      <Col lg={6}>
+                          <select className='form-select form-control'>
+                              <option disabled>select position</option>
+                              <option>frontend</option>
+                              <option>backtend</option>
+                              <option>html</option>
+                          </select>
+                      </Col>
+                  </Row>
+                  <Col lg={12}>
+                      <textarea  rows={7} className='form-control' placeholder='summary'></textarea>
+                  </Col>
+                  <Row className='mt-3 justify-content-center'>
+                      <button type='submit' className='orangebtn'>submit</button>
+                  </Row>
+              </form>
+            </div>
+        </Modal.Body>
+        </Modal>
+
     </>
   );
 }

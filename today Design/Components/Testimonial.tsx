@@ -90,7 +90,7 @@ export default function Testimonial()
                                     <div className="testimonial-inneritens">
                                     <Container>
                                     <Row>
-                                        <Col lg={6} xs={12}>
+                                        <Col lg={6} md={6} xs={12}>
                                             <div className='testimonial-item'>
                                                 <img src='/assets/images/quote.png' className='img-fluid quote' alt=''/>
                                                 <p>{testimonial.Message}</p>
@@ -107,7 +107,7 @@ export default function Testimonial()
                                                 </div>
                                             </div>
                                         </Col>
-                                        <Col lg={6} xs={12}>
+                                        <Col lg={6} md={6} xs={12}>
                                             <div className='testimonial-rightdiv'>
                                                 <h2 className='title'>{testimonial.Name}</h2>
                                                 <p>{testimonial.Position}</p>
