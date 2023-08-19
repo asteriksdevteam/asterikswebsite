@@ -99,6 +99,7 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
   <div className="col-12 col-sm-4 col-md-2 py-4" key={menuItem.menuItem}>
     <div className='menu-widget'>
       <h5>{menuItem.menuItem}</h5>
+
     </div>
     <div className='menu-content mt-3'>
       <ul>

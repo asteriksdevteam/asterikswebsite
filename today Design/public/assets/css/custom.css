@@ -48,18 +48,23 @@ header.desktopmenu.scrolled
 {
     background: #fff !important;
 }
+
 header.desktopmenu.scrolled a.show {
     color: #000 !important;
 }
 header.desktopmenu.scrolled a
 {
-    color:#000;
+    color:#000 !important;
     text-transform: capitalize;
 }
-header.desktopmenu.scrolled a:last-child
+.navbar-nav .dropdown .nav-link
+{
+    transition: unset !important;
+}
+/* header.desktopmenu.scrolled a:last-child
 {
     margin-right:0px;
-}
+} */
 header.desktopmenu.scrolled .whitelogo
 {
     display: none;
@@ -101,6 +106,10 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .menu-widget h5 {
     font-size: 16px;
     font-weight: 600;
+}
+header.desktopmenu.scrolled .menu-content ul li a
+{
+    color:#F2735B !important;    
 }
 .menu-content ul 
 {
