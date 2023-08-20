@@ -25,12 +25,12 @@ export default function Cta()
 
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className='cmodal-header'>
-          <Modal.Title>Apply For An Opening Position Now</Modal.Title>
+          <Modal.Title>Let's start a project together</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <div className='modal-cform'>
               <form action="#">
-                  <Row className='gx-3'>
+              <Row className='gx-3'>
                       <Col lg={6}>
                           <input type="text" placeholder='Name*' className='form-control' required/>
                       </Col>
@@ -40,19 +40,50 @@ export default function Cta()
                   </Row>
                   <Row className='gx-3'>
                       <Col lg={6}>
-                          <input type="text" placeholder='phone*' className='form-control' required/>
+                          <input type="text" placeholder='Phone*' className='form-control' required/>
                       </Col>
                       <Col lg={6}>
                           <select className='form-select form-control'>
-                              <option disabled>select position</option>
-                              <option>frontend</option>
-                              <option>backtend</option>
-                              <option>html</option>
+                              <option disabled>Select Service</option>
+                              <option>SEO</option>
+                              <option>PPC</option>
+                              <option>Social Media Marketing</option>
+                              <option>Search Engine Marketing</option>
+                              <option>Video Marketing</option>
+                              <option>E-Commerce Marketing</option>
+                              <option>Content Marketing</option>
+                              <option>Email Marketing</option>
+                              <option>Small Business SEO</option>
+                              <option>Local SEO</option>
+                              <option>Google ADS</option>
+                              <option>Articles Writing</option>
+                              <option>Blog Management</option>
+                              <option>Premium Web Copywriting</option>
+                              <option>Web Content Services</option>
+                              <option>E-Book Writing</option>
+                              <option>Book Writing</option>
+                              <option>Guest Blog Writing & Publishing</option>
+                              <option>Business Plan Writing Packages</option>
+                              <option>Custom Online Press Release Writing</option>
+                              <option>Online Presentation</option>
+                              <option>Business Proposal Writing</option>
+                              <option>Newsletter</option>
+                              <option>Speech Writing</option>
+                              <option>SOP & LOR & Biography</option>
+                              <option>Hosting</option>
+                              <option>Consultation & Implementation</option>
+                              <option>Website Development</option>
+                              <option>Mobile App Development</option>
+                              <option>Creative Logo Design</option>
+                              <option>Website Template Design</option>
+                              <option>Mobile App UI UX</option>
+                              <option>Branding</option>
+
                           </select>
                       </Col>
                   </Row>
                   <Col lg={12}>
-                      <textarea  rows={7} className='form-control' placeholder='summary'></textarea>
+                      <textarea  rows={7} className='form-control' placeholder='Summary'></textarea>
                   </Col>
                   <Row className='mt-3 justify-content-center'>
                       <button type='submit' className='orangebtn'>submit</button>

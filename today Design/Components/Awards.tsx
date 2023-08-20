@@ -40,7 +40,7 @@ export default function Awards()
                 <Row className='justify-content-center text-center'>
                     <Col lg={8}>
                         <h2 className='title'>Awards & Recognitions</h2>
-                        <p className='desc'>Sit lectus tincidunt mi quis nunc. Ut libero morbi fermentum nulla tincidunt aliquam malesuada eget nulla. Vitae semper urna et egestas vitae posuere elementum tellus. </p>
+                        <p className='desc'>Recipient of prestigious awards and widespread recognition for excellence in innovation, design, and customer satisfaction, showcasing our commitment to industry leadership.</p>
                     </Col>
                 </Row>  
                 <Row>

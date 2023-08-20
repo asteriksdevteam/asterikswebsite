@@ -374,6 +374,10 @@ header.desktopmenu.scrolled .menu-content ul li a
     background: #F9F9F9;
     padding-bottom: 155px;
 }
+.aboutallimg
+{
+    border-radius: 25px;
+}
 .aboutsection-content
 {
     position: relative;
@@ -1057,6 +1061,11 @@ header.desktopmenu.scrolled .menu-content ul li a
     background:#F9F9F9;
     position: relative;
     overflow: hidden;
+}
+.tel
+{
+    color: #000;
+    text-decoration: none;
 }
 .contactsection:before
 {

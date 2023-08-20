@@ -10,6 +10,7 @@ export default function Vission()
         Vision_statment_heading: string;
         Vision_statment: string;
         vision_image: string;
+        path: string;
       };
         // set the states for data,loading, and error
         const [data, setData] = useState<Vission | null>(null);
@@ -49,7 +50,7 @@ export default function Vission()
             <Container>
                 <Row>
                     <Col lg={6} md={6} className="order1">
-                        <img src='/assets/images/vission.png' className='company' alt=''/>
+                        <img src={`${data?.path}${data?.vision_image}`} className='company aboutallimg' alt=''/>
                     </Col>
                     <Col lg={6} md={6} className='my-auto order2'>
                         {/* <h2 className='title'>Vision Statement </h2>

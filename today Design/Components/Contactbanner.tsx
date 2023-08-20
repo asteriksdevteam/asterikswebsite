@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {Container, Row, Col} from 'react-bootstrap'
 
@@ -83,7 +84,7 @@ export default function Contactbanner()
                                             </Row>
                                             <Row className='gx-3'>
                                                 <Col lg={6}>
-                                                    <input type="text" placeholder='phone*' className='form-control' required/>
+                                                    <input type="text" placeholder='Phone*' className='form-control' required/>
                                                 </Col>
                                                 <Col lg={6}>
                                                     <select className='form-select form-control'>
@@ -94,7 +95,7 @@ export default function Contactbanner()
                                                 </Col>
                                             </Row>
                                             <Col lg={12} className='mt-3'>
-                                                <textarea  rows={7} className='form-control' placeholder='summary'></textarea>
+                                                <textarea  rows={7} className='form-control' placeholder='Summary'></textarea>
                                             </Col>
                                             <Col lg={12} className='mt-3'>
                                                 <button type='submit' className='orangebtn contactbtn'>submit</button>
@@ -110,7 +111,7 @@ export default function Contactbanner()
                                 
                                 {/* +92-345-2702202 */}
                                 
-                                {data?.contactno}
+                               <Link className="tel" href={`tel:${data?.contactno}`}> {data?.contactno}</Link>
 
                                 </li>
                                 
@@ -118,7 +119,7 @@ export default function Contactbanner()
                                 
                                 {/* info@asteriksdigital.com */}
 
-                                {data?.email}
+                                <Link className="tel" href={`emailto:${data?.email}`}> {data?.email}</Link>
                                 
                                 </li>
                                 
