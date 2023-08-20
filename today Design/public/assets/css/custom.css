@@ -17,6 +17,7 @@ p
 section
 {
     padding:50px 0;
+    overflow: hidden;
 }
 /*menu*/
 
@@ -373,10 +374,6 @@ header.desktopmenu.scrolled .menu-content ul li a
     position: relative;
     background: #F9F9F9;
     padding-bottom: 155px;
-}
-.aboutallimg
-{
-    border-radius: 25px;
 }
 .aboutsection-content
 {
@@ -1062,11 +1059,6 @@ header.desktopmenu.scrolled .menu-content ul li a
     position: relative;
     overflow: hidden;
 }
-.tel
-{
-    color: #000;
-    text-decoration: none;
-}
 .contactsection:before
 {
     content: '';
@@ -1470,161 +1462,80 @@ textarea:focus
 {
     border-bottom:0px !important;
 }
-/* @media(max-width:1031px)
+
+
+@media(max-width:1600px)
 {
-    
-    .homebanner 
+    .homebanner
     {
-        height: 100vh;
         overflow-x: hidden;
     }
-    
-    section.hekpbusiness-section
+    .homebanner .containercenter 
     {
-        padding-top:81px !important;
-    }
-    section.homebanner .containercenter 
-    {
-        left: 57% !important;
-    }
-    .contactbanner
-    {
-        position: relative;
-        height: 118vh;
-    }
-    .contactbanner-rightcontent
-    {
-        padding: 97px 15px;
-    }
-    .contactbanner:after
-    {
-        min-height: 77vh;
+        left: 55%;
     }
     .aboutsection
     {
-        overflow: hidden;
-        padding-bottom:120px;
+        overflow-x: hidden;
+        padding-bottom: 90px;
     }
     .aboutsection:before 
     {
-        width: 587px;
-        height: 361px;
+        width: 60rem;
+        height: 32rem;
     }
-    .aboutsection-content
+    .testimonial-carousel .owl-nav 
     {
-        padding-bottom:0px;
+        left: 17%;
     }
-    .aboutsection-inntercontent 
+    section.contactbanner 
     {
-        width: 470px;
+        min-height: 129vh !important;
     }
-    .aboutsection-content:before 
+    .contactbanner:before 
     {
-        height: 357px;
+        height: 70vh;
     }
-    .blog2 
+    .contactbanner:after 
     {
-        padding: 66px 48px;
+        min-height: 70vh;
     }
-    .blog4-content {
-        padding: 18px 70px;
-    }
-    .contactsection .form 
+    .hekpbusiness-section 
     {
-        transform: scale(1);
+        padding: 30px 0 80px;
     }
-    .contactsection:before 
+    .clientlogos-section
     {
-        top: 56px;
-        width: 745px;
-        height: 611px;
-        background-size: cover;
-    }
-    .processlist li
-    {
-        font-size: 13px;
-    }
-    .processbox:before 
-    {
-        left: 134px;
-        width: 188px;
-    }
-    .numberbox h1
-    {
-        font-size: 90px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img 
-    {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .company
-    {
-        max-width: 100%;
-    }
-    .ourwork-section:before
-    {
-        width: 548px;
-        top: 265px;
-    }
-    .whychoose-section 
-    {
-        margin-top: 60px;
-    }
-    .clientlogos-leftcontent:before 
-    {
-        left: 60%;
-        width: 349px;
-    }
-    .hekpbusiness-section
-    {
-        overflow-x: hidden;
-    }
-    .blogsection
-    {
-        overflow-x: hidden;
-    }
-    .testimonial-section
-    {
-        overflow-x: hidden;
-    }
-    .awards-section
-    {
-        overflow-x: hidden;
+        position: relative;
+        margin-top: -136px;
     }
     .comaquote 
     {
-        right: 14px;
-        width: 227px !important;
+        right: 142px;
     }
-    .tw {
-        width: 65%;
-        height: 4em;
-    }
-    .testimonial-carousel .owl-nav {
-        left: 12% !important;
-    }
-    .testimonial-carousel .owl-nav
+    .testimonial-item p 
     {
-        width: 32%; 
-        bottom: 15%;
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 16% !important;
+        width: 24% !important;
+        bottom: 5% !important;
     }
     .bigtitle 
     {
-        margin-left: 12px;
+        left: 11% !important;
+        top: 70% !important;
     }
-    .bigtitle span 
+    .blog4-innercontent 
     {
-        font-size: 50px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 54px 45px;
     }
-    
-} */
-
+}
 @media(max-width:1366px)
 {
     .homebanner-cnt
@@ -1667,17 +1578,13 @@ textarea:focus
     }
     .blog2 
     {
-        padding: 78px 48px;
-    }
-    .blog3-content 
-    {
-        padding: 146px 70px;
+        padding: 66px 48px !important;
     }
     .blog4-innercontent {
         position: relative;
         z-index: 1;
         color: #fff;
-        padding: 66px 45px;
+        padding: 53px 45px !important;
     }
     .comaquote 
     {
@@ -1689,203 +1596,223 @@ textarea:focus
     }
     .testimonial-carousel .owl-nav 
     {
-        left: 17%;
-        width: 30%;
-        bottom: 6%;
+        left: 17% !important;
+        width: 30% !important;
+        bottom: 6% !important;
     }
     .bigtitle 
     {
-        left: 11% ;
-        top: 70% ;
+        left: 11% !important;
+        top: 70% !important;
     }
-    .contactbanner 
+    section.contactbanner 
     {
-        min-height: 139vh;
+        min-height: 139vh !important;
+        padding-bottom:0px;
     }
-}
-@media(min-width:1600px)
-{
-    .homebanner
-    {
-        overflow-x: hidden;
-    }
-    .homebanner .containercenter 
-    {
-        left: 55%;
-    }
-    .aboutsection
-    {
-        overflow-x: hidden;
-        padding-bottom: 90px;
-    }
-    .aboutsection:before 
-    {
-        width: 60rem;
-        height: 32rem;
-    }
-    .testimonial-section
-    {
-        overflow-x: hidden;
-    }
-    .testimonial-carousel .owl-nav 
-    {
-        left: 17%;
-    }
-    .hekpbusiness-section
-    {
-        overflow-x: hidden;
-    }
-    .blogsection
-    {
-        overflow-x: hidden;
-    }
-    .aboutbanner-section
-    {
-        overflow-x: hidden;
-    }
-    .contactbanner {
-        position: relative;
-        min-height: 100vh;
-    }
-    .contactbanner:after
+    .careerbanner 
     {
         min-height: 66vh;
     }
-    .hekpbusiness-section 
+    .careerbanner .containercenter
     {
-        padding: 30px 0 80px;
-    }
-    .clientlogos-section
-    {
-        position: relative;
-        margin-top: -136px;
-    }
-    .comaquote 
-    {
-        right: 142px;
-    }
-    .testimonial-item p 
-    {
-        height: 6rem;
-    }
-    .testimonial-carousel .owl-nav 
-    {
-        left: 16%;
-        width: 24%;
-        bottom: 5%;
-    }
-    .bigtitle 
-    {
-        left: 11%;
-        top: 70%;
-    }
-    .blog4-innercontent {
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        padding: 54px 45px;
-    }
-    .contactbanner 
-    {
-        min-height: 139vh;
+        top:60%;
     }
 }
-/* @media(max-width:1024px)
+@media(min-width:768px) and (max-width:1024px)
 {
-    body{
-        overflow: hidden;
-    }
-    .homebanner
+    .bannerheading 
     {
-        overflow-x: hidden;
+        font-size: 30px;
     }
-    section.homebanner .containercenter 
+    .bannertext
     {
-        left: 50%;
+        font-size: 13px;
+    }
+    .homebanner-tabcnt 
+    {
+        max-width: 35rem;
+        min-width: 35rem;
+        margin: auto;
+    }
+    .orangebtn 
+    {
+        font-size: 13px;
+        padding: 15px 33px;
+    }
+    .contactbanner-rightcontent 
+    {
+        padding: 101px 15px;
+    }
+    .hekpbusiness-section .cardbox
+    {
+        margin-bottom:26px;
     }
     .aboutsection
     {
-        overflow-x: hidden;
-        padding-bottom: 90px;
+        overflow: hidden;
+        padding-bottom: 70px;
     }
-    .aboutsection:before 
+    .aboutsection-inntercontent 
     {
-        width: 625px;
-        height: 380px;
+        width: 15rem;
     }
     .aboutsection-inntercontent p 
     {
         font-size: 13px;
     }
-    .aboutsection-inntercontent 
+    .aboutsection:before 
     {
-        width: 30rem;
+        top: -139px;
+        width: 587px;
+        height: 44rem;
     }
-    .testimonial-section
+    .aboutsection-content:before 
     {
-        overflow-x: hidden;
+        width: 587px;
+        height: 33rem;
     }
-    .testimonial-carousel .owl-nav 
+    .title
     {
-        left: 17%;
+        font-size: 22px;
     }
-    .hekpbusiness-section
+    .subtitle
     {
-        overflow-x: hidden;
+        font-size: 19px;
     }
-    .blogsection
+    .clientlogos-section 
     {
-        overflow-x: hidden;
+        margin-top: -139px;
     }
-    .aboutbanner-section
+    .clientlogos-leftcontent:before 
     {
-        overflow-x: hidden;
+        left: 64%;
+        width: 239px;
     }
-    .contactbanner {
-        position: relative;
-        min-height: 100vh;
-    }
-    .contactbanner:after
+    .company
     {
-        min-height: 66vh;
+        width: 100%;
     }
-    .hekpbusiness-section 
+    .partner
     {
-        padding: 30px 0 80px;
+        display: block;
+        margin: auto;
     }
-    .clientlogos-section
+    .blogtabs a
     {
-        position: relative;
-        margin-top: -136px;
+        padding:0px;
     }
-    .comaquote 
+    .contactsection:before 
     {
-        right: 142px;
+        width: 767px;
+        height: 680px;
+        background-size: contain;
     }
-    .testimonial-item p 
+    .contactsection .form 
     {
-        height: 6rem;
+        transform: scale(0.9);
     }
-    .testimonial-carousel .owl-nav
+    .card
     {
-        left:16%;
-        width: 24%;
-        bottom: -4%;
+        margin-bottom: 25px;
     }
-    .bigtitle 
+    .ourwork-section:before
     {
-        left: 11%;
-        top: 79%;
+        width: 437px;
+        top: 223px;
     }
-    .blog3-content 
+    .ourwork-section
     {
-        padding: 146px 70px;
+        padding-bottom:0px;
+    }
+    .whychoose-section
+    {
+        margin-top:100px;
+    }
+    .processbox:before
+    {
+        left: 129px;
+        width: 113px;
+    }
+    .numberbox
+    {
+        top:-66px;
+    }
+    .numberbox h1
+    {
+        font-size: 80px;
+    }
+    .servicetype-tabs
+    {
+        width: 100% !important;
+    }
+    .servicetype-left img {
+        min-width: 100%;
+        min-height: 400px;
+        object-fit: revert;
+    }
+    .blogsection p
+    {
+        font-size: 13px;
     }
     .blog4-innercontent 
     {
-        padding: 54px 45px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 42px 45px;
     }
-} */
+    .blog2 
+    {
+        padding: 53px 48px !important;
+    }
+    .p0
+    {
+        padding:0px !important;
+    }
+    .widget h5 
+    {
+        font-size: 17px;
+    }
+    .bannerheading
+    {
+        font-size:35px;
+    }
+    .ourprocess-section
+    {
+        padding-bottom: 0px;
+    }
+    .testimonial-item p 
+    {
+        height: 9rem !important;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 17% !important;
+        width: 43% !important;
+        bottom: 0% !important;
+    }
+    .testimonial-item p 
+    {
+        height: 9rem;
+    }
+    .bigtitle 
+    {
+        left: 7% !important;
+        top: 79% !important;
+    }
+    .comaquote 
+    {
+        right: 25px;
+        width: 214px !important;
+    }
+    .contactbanner 
+    {
+        min-height: 103vh !important;
+        max-height: 103vh !important;
+        padding-bottom:0px;
+    }
+}
 @media(max-width:576px)
 {
     .title
@@ -2297,11 +2224,25 @@ textarea:focus
     }
 
 }
-@media (min-width:1900px)
+@media (max-width:1900px)
 {
-    body
+    .clientlogos-section 
     {
-        overflow-x: hidden;
+        margin-top: -158px;
+    }
+    .blog2 
+    {
+        padding: 78px 48px;
+    }
+    .blog3-content 
+    {
+        padding: 146px 70px;
+    }
+    .blog4-innercontent {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 66px 45px;
     }
     .testimonial-item p 
     {
@@ -2318,188 +2259,20 @@ textarea:focus
         left: 19%;
         top: 79%;
     }
-}
-@media(min-width:768px) and (max-width:1024px)
-{
-    .bannerheading 
+    .contactbanner 
     {
-        font-size: 30px;
+        min-height: 108vh !important;
     }
-    .bannertext
+    .contactbanner:before 
     {
-        font-size: 13px;
+        height: 70vh;
     }
-    .homebanner-tabcnt 
+    .contactbanner:after 
     {
-        max-width: 35rem;
-        min-width: 35rem;
-        margin: auto;
+        min-height: 70vh;
     }
-    .orangebtn 
+    .careerbanner 
     {
-        font-size: 13px;
-        padding: 15px 33px;
-    }
-    .contactbanner-rightcontent 
-    {
-        padding: 144px 15px;
-    }
-    .aboutsection
-    {
-        overflow: hidden;
-        padding-bottom: 70px;
-    }
-    .aboutsection-inntercontent 
-    {
-        width: 15rem;
-    }
-    .aboutsection-inntercontent p 
-    {
-        font-size: 13px;
-    }
-    .aboutsection:before 
-    {
-        top: -139px;
-        width: 587px;
-        height: 44rem;
-    }
-    .aboutsection-content:before 
-    {
-        width: 587px;
-        height: 33rem;
-    }
-    .title
-    {
-        font-size: 22px;
-    }
-    .subtitle
-    {
-        font-size: 19px;
-    }
-    .clientlogos-section 
-    {
-        margin-top: -139px;
-    }
-    .clientlogos-leftcontent:before 
-    {
-        left: 64%;
-        width: 239px;
-    }
-    .company
-    {
-        width: 100%;
-    }
-    .partner
-    {
-        display: block;
-        margin: auto;
-    }
-    .blogtabs a
-    {
-        padding:0px;
-    }
-    .contactsection:before 
-    {
-        width: 767px;
-        height: 680px;
-        background-size: contain;
-    }
-    .contactsection .form 
-    {
-        transform: scale(0.9);
-    }
-    .card
-    {
-        margin-bottom: 25px;
-    }
-    .ourwork-section:before
-    {
-        width: 437px;
-        top: 223px;
-    }
-    .ourwork-section
-    {
-        padding-bottom:0px;
-    }
-    .whychoose-section
-    {
-        margin-top:100px;
-    }
-    .processbox:before
-    {
-        left: 129px;
-        width: 113px;
-    }
-    .numberbox
-    {
-        top:-66px;
-    }
-    .numberbox h1
-    {
-        font-size: 80px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .blogsection p
-    {
-        font-size: 13px;
-    }
-    .blog4-innercontent 
-    {
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        padding: 42px 45px;
-    }
-    .blog2 
-    {
-        padding: 42px 48px;
-    }
-    .p0
-    {
-        padding:0px !important;
-    }
-    .widget h5 
-    {
-        font-size: 17px;
-    }
-    .bannerheading
-    {
-        font-size:35px;
-    }
-    .ourprocess-section
-    {
-        padding-bottom: 0px;
-    }
-    .testimonial-item p 
-    {
-        height: 6rem;
-    }
-    .testimonial-carousel .owl-nav 
-    {
-        left: 17%;
-        width: 43%;
-        bottom: 0%;
-    }
-    .testimonial-item p 
-    {
-        height: 9rem;
-    }
-    .bigtitle 
-    {
-        left: 7% !important;
-        top: 79% !important;
-    }
-    .comaquote 
-    {
-        right: 25px;
-        width: 214px !important;
+        min-height: 66vh;
     }
 }
