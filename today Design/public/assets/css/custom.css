@@ -535,6 +535,7 @@ header.desktopmenu.scrolled .menu-content ul li a
 .blog4-content
 {
     position: relative;
+    padding: 0px 25px;
 }
 .blog4-content:before {
 
@@ -1070,6 +1071,11 @@ header.desktopmenu.scrolled .menu-content ul li a
     background: url(/assets/images/contact.png) no-repeat center;
     background-size: cover;
 }
+.tel
+{
+    color: #000;
+    text-decoration: none;
+}
 .contactsection .form
 {
     background:#fff;
@@ -1147,7 +1153,38 @@ header.desktopmenu.scrolled .menu-content ul li a
 .mapimage
 {
     border-radius: 35px;
+    width: 100%;
 }
+.addresstitle img 
+{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    margin-right:20px;
+}
+.addresstitle 
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.addresstitle h3
+{
+    margin-bottom:0px;
+}
+.address-content1 p
+{
+    padding:0 69px 0;
+}
+.address-content1 
+{
+    background-color: white;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 
 /*contactbanner*/
 
@@ -1366,6 +1403,35 @@ header.desktopmenu.scrolled .menu-content ul li a
 {
     min-width:100%;
 }
+/*privacy*/
+
+.privacybanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
+
+/*privacy*/
+
+.faqbanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
+
+/*terms*/
+
+.termsbanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
 
 /*footer*/
 
@@ -1405,6 +1471,7 @@ header.desktopmenu.scrolled .menu-content ul li a
     text-decoration: none;
     color: #000;
     font-weight: 500;
+    text-transform: capitalize;
 }
 .footer-content ul li img 
 {
@@ -1504,6 +1571,10 @@ textarea:focus
     {
         padding: 30px 0 80px;
     }
+    .smallicon img
+    {
+        width: 80px;
+    }
     .clientlogos-section
     {
         position: relative;
@@ -1578,7 +1649,7 @@ textarea:focus
     }
     .blog2 
     {
-        padding: 66px 48px !important;
+        padding: 77px 48px !important;
     }
     .blog4-innercontent {
         position: relative;
@@ -1812,12 +1883,22 @@ textarea:focus
         max-height: 103vh !important;
         padding-bottom:0px;
     }
+    .address-content
+    {
+        margin-top: 30px;
+    }
 }
 @media(max-width:576px)
 {
     .title
     {
         font-size: 25px !important;
+    }
+    .homebanner-cnt
+    {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
     .bannerheading 
     {
@@ -1989,7 +2070,7 @@ textarea:focus
     }
     .blog4-content 
     {
-        padding: 33px 51px !important;
+        padding: 0px;
     }
     .blog4-content:before
     {
@@ -1999,13 +2080,14 @@ textarea:focus
     {
         border-radius: 0px;
     }
-    .testimonial-item p
+    .blog2 p
     {
         font-size: 13px;
     }
-    .testimonial-carousel .owl-nav
+    .testimonial-item p 
     {
-        width: 68%;
+        height: 6rem !important;
+        color:#fff;
     }
     .starlist ul li svg 
     {
@@ -2129,6 +2211,7 @@ textarea:focus
         position: relative;
         z-index: 1;
     }
+    
     .testimonial-carousel .item:before
     {
         content: '';
@@ -2147,8 +2230,14 @@ textarea:focus
     }
     .testimonial-carousel .owl-nav 
     {
-        left: 23% !important;
-        bottom: 180px;
+        left: 19% !important;
+        bottom: -31px !important;
+        width: 50% !important;
+    }
+    .bigtitle 
+    {
+        left: 9% !important;
+        top: 105% !important;
     }
     .testimonial-rightdiv
     {
@@ -2222,9 +2311,38 @@ textarea:focus
     {
         font-size: 40px;
     }
+    .address-content
+    {
+        margin-top: 30px;
+    }
+    .offcanvas-body a
+    {
+        color:#000 !important;
+    }
+    .offcanvas-body a:nth-child(1)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(2)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(4)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(5)
+    {
+        margin-bottom:20px;
+    }
+    .estimate {
+        border-radius: 100px;
+        background: #F2735B;
+        padding: 16px 40px;
+    }
 
 }
-@media (max-width:1900px)
+@media (max-width:1920px)
 {
     .clientlogos-section 
     {

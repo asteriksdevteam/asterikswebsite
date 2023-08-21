@@ -10,8 +10,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 interface MenuItem {
-  menuItem: string;
-  sub_category: { name: string }[];
+  name: string;
+  sub_category: { name: string ,slug: string }[];
 }
 
 const getAllMenu = async (): Promise<MenuItem[]> => {
@@ -92,23 +92,23 @@ placement="end"
 <Link href="/about">About</Link>
 <NavDropdown
 title="Service" 
-id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
+id={`offcanvasNavbarDropdown-expand-${targetExpand}`} className='mb-0'
 >
 
 <div className="mega-content px-4">
 <Container >
 <Row className='justify-content-between'>
 {menuData.map((menuItem) => (
-  <div className="col-12 col-sm-4 col-md-2 py-4" key={menuItem.menuItem}>
+  <div className="col-12 col-sm-4 col-md-2 py-4" key={menuItem.name}>
     <div className='menu-widget'>
-      <h5>{menuItem.menuItem}</h5>
+      <h5>{menuItem.name}</h5>
 
     </div>
     <div className='menu-content mt-3'>
       <ul>
         {menuItem.sub_category.map((subItem) => (
           <li key={subItem.name}>
-            <Link className="dropdown-item" href="/service">{subItem.name}</Link>
+            <Link className="dropdown-item" href={`/${encodeURIComponent(subItem.slug)}`}>{subItem.name}</Link>
           </li>
         ))}
       </ul>
@@ -149,7 +149,7 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
 </NavDropdown>
 <Link href="/career">Careers</Link>
 {/* <Link href="/blog">Blog</Link> */}
-<Link href="/contact">contact</Link>
+<Link href="/contact">Contact</Link>
 {/* <Link href="#">+92 320-095-0682</Link> */}
 <Link href="#" className='estimate' onClick={handleShow}>Estimate Project</Link>
 </Nav>
@@ -164,7 +164,7 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className='cmodal-header'>
-          <Modal.Title>Let's start a project together</Modal.Title>
+          <Modal.Title>Lets start a project together</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <div className='modal-cform'>

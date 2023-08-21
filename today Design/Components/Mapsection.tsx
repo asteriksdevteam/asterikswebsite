@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useEffect, useState } from "react";
 import {Container, Row, Col} from 'react-bootstrap'
@@ -54,7 +55,34 @@ const errorComponent = <div className="text-red-500">Error: {error}</div>;
                 <Row>
                   {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14487.761133514341!2d67.0413872655571!3d24.797498276807175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d730694a36f%3A0x5f5916bf16dd90d7!2sAsteriks%20Digital!5e0!3m2!1sen!2s!4v1691992924778!5m2!1sen!2s" width="600" height="450" style={{border:0}} className='mapimage' loading="lazy"></iframe> */}
 
-                  <iframe src={data?.iframe_link} width="600" height="450" style={{border:0}} className='mapimage' loading="lazy"></iframe>
+                  <Col lg={6} md={12} xs={12}>
+                    <iframe src={data?.iframe_link} height="450" style={{border:0}} className='mapimage' loading="lazy"></iframe>
+                  </Col>
+
+                  <Col lg={6} md={12} xs={12} className="my-auto">
+
+                    <div className="address-content">
+                         <div className="address-content1">
+                           <div className="addresstitle">
+                            <img src="/assets/images/pk.svg" alt="" />
+                             <h3 className="subtitle">Karachi,Pakistan</h3>
+                           </div>
+                            <p>Office 302, Building #32C Lane 8 Bukhari Commercial, <br></br>
+                             DHA Phase 6 Karachi, Pakistan<br></br>
+                                75500</p>
+                         </div>
+                         <div className="address-content1">
+                           <div className="addresstitle">
+                            <img src="/assets/images/usa.svg" alt="" />
+                             <h3 className="subtitle">Texas,USA</h3>
+                           </div>
+                           <p>5900 Balcones Drive STE 100<br></br>
+                           Austin, TX<br></br>
+                           78731</p>
+                         </div>
+                    </div>
+
+                  </Col>
 
                 </Row>
             </Container>

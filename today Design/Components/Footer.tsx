@@ -56,6 +56,7 @@ export default function Footer() {
                       <ul>
                         <li><Link href="/contact">FAQ</Link></li>
                         <li><Link href="/about">Policy</Link></li>
+                        <li><Link href="/about">terms & condition</Link></li>
                         {/* <li><Link href="#">Business</Link></li> */}
                       </ul>
                     </div>
@@ -64,7 +65,7 @@ export default function Footer() {
                     <div className="widget"><h5>Contact</h5></div>
                     <div className="footer-lst">
                       <ul>
-                        <li><Link href="#">WhatsApp</Link></li>
+                        <li><Link target='_blank' href="https://wa.me/923200950682">WhatsApp</Link></li>
                         <li><Link href="#">Support 24/5</Link></li>
                       </ul>
                     </div>

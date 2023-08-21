@@ -117,9 +117,9 @@ export default function Homebanner()
           </Container>
         </section>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton className='cmodal-header'>
-          <Modal.Title>Let's start a project together</Modal.Title>
+          <Modal.Title>Lets start a project together</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <div className='modal-cform'>
