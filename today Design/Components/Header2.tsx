@@ -11,6 +11,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 interface MenuItem {
   name: string;
+  slug: string;
   sub_category: { name: string ,slug: string }[];
 }
 
@@ -108,7 +109,8 @@ id={`offcanvasNavbarDropdown-expand-${targetExpand}`} className='mb-0'
       <ul>
         {menuItem.sub_category.map((subItem) => (
           <li key={subItem.name}>
-            <Link className="dropdown-item" href={`/${encodeURIComponent(subItem.slug)}`}>{subItem.name}</Link>
+            <Link className="dropdown-item" href={`/service/${encodeURIComponent(subItem.slug)}?category=${menuItem.slug}`}>{subItem.name}</Link>
+            
           </li>
         ))}
       </ul>
