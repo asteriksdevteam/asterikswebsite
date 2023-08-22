@@ -47,30 +47,62 @@ export default function Awards()
                     <OwlCarousel className='awards-carousel owl-theme' {...awardsbanner}>
                         <div className='item'>
                             <div className='award-item'>
-                                <img src="/assets/images/award1.png" className='awardsimg' alt="" />
-                                <h3 className='subtitle'>Award No 1</h3>
-                                <p>Communication protocols apart from engagement models</p>
+                                <img src="/assets/images/badges/ByteFusion.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>ByteFusion Solutions</h3>
                             </div>
                         </div>
                         <div className='item'>
                             <div className='award-item'>
-                                <img src="/assets/images/award2.png" className='awardsimg' alt="" />
-                                <h3 className='subtitle'>Award No 2</h3>
-                                <p>Communication protocols apart from engagement models</p>
+                                <img src="/assets/images/badges/CodeWave.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>CodeWave Innovations</h3>
                             </div>
                         </div>
                         <div className='item'>
                             <div className='award-item'>
-                                <img src="/assets/images/award3.png" className='awardsimg' alt="" />
-                                <h3 className='subtitle'>Award No 3</h3>
-                                <p>Communication protocols apart from engagement models</p>
+                                <img src="/assets/images/badges/CyberLink.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>CyberLink Dynamics</h3>
                             </div>
                         </div>
                         <div className='item'>
                             <div className='award-item'>
-                                <img src="/assets/images/award4.png" className='awardsimg' alt="" />
-                                <h3 className='subtitle'>Award No 4</h3>
-                                <p>Communication protocols apart from engagement models</p>
+                                <img src="/assets/images/badges/DataSynth.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>DataSynth Labs</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/LogicSphere.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>LogicSphere Innovations</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/NexusByte.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>NexusByte Labs</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/PixelPro.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>PixelPro Technologies</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/QuantumScape.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>QuantumScape Solutions</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/Synthex.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>Synthex Software</h3>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='award-item'>
+                                <img src="/assets/images/badges/TechNova.png" className='awardsimg' alt="" />
+                                <h3 className='subtitle'>TechNova Systems</h3>
                             </div>
                         </div>
                     </OwlCarousel>

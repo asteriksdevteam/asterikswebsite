@@ -26,18 +26,30 @@ export default function Page()
   const useSearchParamsddd = searchParams.get('category');
 
   const fetchData = async () => {
-    try {
+    try 
+    {
       const data = await fetch(`https://asteriksdigital.com/admin/api/getServicesbyslug/${useSearchParamsddd}/${slug}`);
       const responseData = await data.json();
-      const data1 = responseData[0]['sub_category'][0]['get_services'];
+      const serviceData = responseData[0]['sub_category'][0]['get_services'];
+
+      // const data1 = responseData[0]['sub_category'][0]['get_services'];
       // console.log(responseData[0]['sub_category'][0]['get_services']['main_heading']);
       // setData(data1);
-      return data1;
-    } catch (error) {
+      // return responseData[0]['sub_category'][0]['get_services'];
+
+      setData(serviceData);
+      setLoading(false);
+
+    } 
+    catch (error) 
+    {
       console.error('Error fetching service data:', error);
     }
   };
+  fetchData();
+  
 
+  console.log(data);
   console.log(fetchData());
 
   // const selectedKeysArray: { key1: ValueType; key2: ValueType }[] = fetchedData.map(item => ({
