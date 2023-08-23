@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import Contactsection from '@/Components/Contactsection'
 import Cta from '@/Components/Cta'
@@ -76,6 +78,8 @@ export default function Page()
     tab5_desc:  string | undefined;
     tab5_heading:  string | undefined;
     tab5_image:  string | undefined;
+    sub_heading_ourprocess:  string | undefined;
+    sub_heading_chooseservices:  string | undefined;
   };
 
   const [data, setData] = useState<ServiceData | null>(null);
@@ -118,13 +122,15 @@ export default function Page()
   
   return (
     <>
-      <section className='servicebanner-section'>
+      <section className='servicebanner-section' style={{
+                                    backgroundImage: `url(${data?.path}${data?.header_image})`,
+                                  }}>
           <Container className='containercenter'>
               <Row className='justify-content-center'>
                   <Col lg={6} md={6} xs={12} className='my-auto'>
                       <div className='servicebanner-content'>
-                          <h1 className='bannerheading'>{data?.service_heading}</h1>
-                          <p>{data?.service_desc}</p>
+                          <h1 className='bannerheading'>{data?.main_heading}</h1>
+                          <p>{data?.main_desc}</p>
                       </div>
                   </Col>
                   <Col lg={6} md={6} xs={12}>
@@ -168,8 +174,8 @@ export default function Page()
           <Container>
               <Row className='justify-content-center text-center'>
                   <Col lg={8}>
-                      <h2 className='title'>Web Development Services</h2>
-                      <p className='desc'>Your web presence is pivotal for your brand, aside from it serving as a point of service. Get started with an experienced website creation team in the USA that knows just what you need to take you forward.</p>
+                      <h2 className='title'>{data?.service_heading}</h2>
+                      <p className='desc'>{data?.service_desc}</p>
                   </Col>
               </Row>
               <Row className='mt-4'>
@@ -209,17 +215,20 @@ export default function Page()
             <Container>
                 <Row className='justify-content-center text-center'>
                     <Col lg={9} md={9}>
-                        <h2 className='title'>Our Work</h2>
+                        <h2 className='title'>{data?.portfolio_heading}</h2>
                         <h3 className='subtitle3'>Web Development Solutions Portfolio</h3>
-                        <p className='desc'>Spanning multiple industries, our skilled and experienced web developers build solutions to take their business forward and thrive among the best of their industries competitors.</p>
+                        <p className='desc'>{data?.portfolio_desc}</p>
                     </Col>
                 </Row>
                 <Row className='mt-4 align-items-center'>
-                    <Col lg={{ span: 6, offset: 6 }} md={{ span: 6, offset: 6 }} className='ourwork-description align-items-center my-auto'>
-                    <img src="/assets/images/smalllogo.png" className='smalllogo' alt="" />
-                    <p className='smalltitle'>Asteriks Digital</p>
-                    <h2 className='title'>Asteriks Digital</h2>
-                    <p>Spanning multiple industries, our skilled and experienced web developers build solutions to take their business forward and thrive among the best of their industries competitors.</p>
+                     <Col lg={6} md={6} xs={12} className='my-auto'>
+                        <img src={`${data?.path}${data?.portfolio_image}`} className='smalllogo' alt="" />
+                    </Col>
+                    <Col lg={6} md={6} xs={12} className='ourwork-description align-items-center my-auto'>
+                        <img src={`${data?.path}${data?.portfolio_logo}`} className='smalllogo' alt="" />
+                        <p className='smalltitle'>{data?.company_heading}</p>
+                        <h2 className='title'>{data?.company_heading}</h2>
+                        <p>{data?.company_desc}</p>
                     </Col>
                 </Row>
             </Container>
@@ -228,12 +237,12 @@ export default function Page()
             <Container>
                 <Row className='justify-content-center text-center'>
                     <Col lg={9}>
-                        <h2 className='title'>Why Choose Our Blockchain App Development Services?</h2>                    
-                        <p>Along with designing and developing your web presence, we propose business-oriented web development solutions that fit your needs and speak volumes of your values as a brand. With experienced web developers and digital artisans, you get a state-of-the-art solution with a cutting-edge appeal that engages more people online. Leverage powerful technologies and robust architecture to build a web solution that fulfils your needs under packaged web development services</p>
+                        <h2 className='title'>{data?.choose_heading}</h2>                    
+                        <p>{data?.choose_desc}</p>
                     </Col>
                 </Row>
                 <Row>
-                    <img src="/assets/images/whychoose.png" alt=""/>
+                    <img src={`${data?.path}${data?.choose_image}`} alt=""/>
                 </Row>
             </Container>
         </section>
@@ -241,9 +250,9 @@ export default function Page()
             <Container>
                 <Row className='justify-content-center text-center'>
                     <Col lg={9}>
-                        <h2 className='title'>Our Process</h2>
+                        <h2 className='title'>{data?.process_heading}</h2>
                         <h3 className='subtitle2 mb-4'> Web Development</h3>
-                        <p>Build a web presence thriving with programming tools like Python, Angular, React Native, and renowned cloud website creation services in the USA with creative experts who formulate customized solutions.</p>
+                        <p>{data?.process_desc}</p>
                     </Col>
                 </Row>
                 <Row className='pt-4 mt-5'>
@@ -252,13 +261,8 @@ export default function Page()
                             <div className='numberbox'>
                                 <h1>01</h1>
                             </div>
-                            <ul className='processlist'>
-                            <h3 className='subtitle'> Project Planning</h3>
-                            <li> Business analysis</li>
-                                <li>Documenting specifications</li>
-                                <li>Preparing wireframes</li>
-                                <li>Getting client approval</li>
-                            </ul>
+                            <h3 className='subtitle'>{data?.p1_heading}</h3>
+                            <p className='processlist'>{data?.p1_desc}</p>
                         </div>
                     </Col>
                     <Col lg={4} md={4}>
@@ -266,13 +270,8 @@ export default function Page()
                             <div className='numberbox'>
                                 <h1>02</h1>
                             </div>
-                            <ul className='processlist'>
-                            <h3 className='subtitle'>UI/UX Design</h3>
-                                    <li>Crafting app prototype</li>
-                                    <li>Making changes</li>
-                                    <li>Getting client approval</li>
-                                    <li>Implementing feedback</li>
-                            </ul>
+                            <h3 className='subtitle'>{data?.p2_heading}</h3>
+                            <p className='processlist'>{data?.p2_desc}</p>
                         </div>
                     </Col>
                     <Col lg={4} md={4}>
@@ -280,13 +279,8 @@ export default function Page()
                             <div className='numberbox'>
                                 <h1>03</h1>
                             </div>
-                            <ul className='processlist'>
-                            <h3 className='subtitle'> Development</h3>
-                                <li>Development strategy</li>
-                                <li>Testing strategy</li>
-                                <li>Product development</li>
-                                <li>Product release</li>
-                            </ul>
+                            <h3 className='subtitle'>{data?.p3_heading}</h3>
+                            <p className='processlist'>{data?.p3_desc}</p>
                         </div>
                     </Col>
                 </Row>
