@@ -81,7 +81,9 @@ export default function Page()
     sub_heading_ourprocess:  string | undefined;
     sub_heading_chooseservices:  string | undefined;
   };
-
+  function createMarkup(converttohtml: any) {
+    return {__html: converttohtml};
+}
   const [data, setData] = useState<ServiceData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -262,7 +264,8 @@ export default function Page()
                                 <h1>01</h1>
                             </div>
                             <h3 className='subtitle'>{data?.p1_heading}</h3>
-                            <p className='processlist'>{data?.p1_desc}</p>
+                            {<p className='processlist' dangerouslySetInnerHTML={ createMarkup(data?.p1_desc) }></p>}
+
                         </div>
                     </Col>
                     <Col lg={4} md={4}>
@@ -271,7 +274,8 @@ export default function Page()
                                 <h1>02</h1>
                             </div>
                             <h3 className='subtitle'>{data?.p2_heading}</h3>
-                            <p className='processlist'>{data?.p2_desc}</p>
+                            {<p className='processlist' dangerouslySetInnerHTML={ createMarkup(data?.p2_desc) }></p>}
+
                         </div>
                     </Col>
                     <Col lg={4} md={4}>
@@ -280,7 +284,8 @@ export default function Page()
                                 <h1>03</h1>
                             </div>
                             <h3 className='subtitle'>{data?.p3_heading}</h3>
-                            <p className='processlist'>{data?.p3_desc}</p>
+                            {<p className='processlist' dangerouslySetInnerHTML={ createMarkup(data?.p3_desc) }></p>}
+
                         </div>
                     </Col>
                 </Row>
