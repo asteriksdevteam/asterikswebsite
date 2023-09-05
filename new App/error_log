@@ -1,0 +1,1 @@
+[10-Aug-2023 09:40:38 UTC] PHP Fatal error:  Access level to App\Models\Career::$timestamps must be public (as in class Illuminate\Database\Eloquent\Model) in /home/qw7dd32g3ftw/public_html/admin/app/Models/Career.php on line 8
