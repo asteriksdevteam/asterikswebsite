@@ -10,6 +10,7 @@ export default function Companyprofile()
         company_profile_heading: string;
         company_profile: string;
         our_company_image: string;
+        path: string;
       };
         // set the states for data,loading, and error
         const [data, setData] = useState<Companyprofile | null>(null);
@@ -49,7 +50,7 @@ export default function Companyprofile()
             <Container>
                 <Row>
                     <Col lg={6} md={6} className="order1">
-                        <img src='/assets/images/companyprofile.png' className='company' alt=''/>
+                        <img src={`${data?.path}${data?.our_company_image}`} className='company aboutallimg' alt=''/>
                     </Col>
                     <Col lg={6} md={6} className='my-auto order2'>
                         {/* <h2 className='title'>Company Profile</h2>

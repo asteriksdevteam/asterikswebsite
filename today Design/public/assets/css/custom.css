@@ -17,6 +17,7 @@ p
 section
 {
     padding:50px 0;
+    overflow: hidden;
 }
 /*menu*/
 
@@ -36,6 +37,12 @@ section
     margin-right:20px;
     text-transform: capitalize !important;
 }
+.desktopmenu .navbar-nav a.estimate
+{
+    border-radius: 100px;
+    background:#F2735B;
+    padding: 16px 40px;
+}
 .desktopmenu a:hover
 {
     color:#F2735B;
@@ -48,18 +55,23 @@ header.desktopmenu.scrolled
 {
     background: #fff !important;
 }
-header.desktopmenu.scrolled a.show {
+header.desktopmenu.scrolled a.show 
+{
     color: #000 !important;
 }
 header.desktopmenu.scrolled a
 {
-    color:#000;
+    color:#000 !important;
     text-transform: capitalize;
 }
-header.desktopmenu.scrolled a:last-child
+.navbar-nav .dropdown .nav-link
+{
+    transition: unset !important;
+}
+/* header.desktopmenu.scrolled a:last-child
 {
     margin-right:0px;
-}
+} */
 header.desktopmenu.scrolled .whitelogo
 {
     display: none;
@@ -101,6 +113,10 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .menu-widget h5 {
     font-size: 16px;
     font-weight: 600;
+}
+header.desktopmenu.scrolled .menu-content ul li a
+{
+    color:#F2735B !important;    
 }
 .menu-content ul 
 {
@@ -264,7 +280,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .hekpbusiness-section
 {
     position: relative;
-    padding:140px 0 80px;
+    padding:40px 0 80px;
 }
 .title 
 {
@@ -519,8 +535,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .blog4-content
 {
     position: relative;
-    padding: 54px 70px;
-
+    padding: 0px 25px;
 }
 .blog4-content:before {
 
@@ -595,7 +610,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 
 .awardsimg
 {
-    max-width: 100px;
+    max-width: 130px;
     text-align: center;
     margin: auto;
 }
@@ -622,6 +637,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .testimonial-section
 {
     position: relative;
+    overflow: hidden;
     /* background:url('/assets/images/testimonialbg.png') center no-repeat;
     background-size: cover; */
     padding:0px;
@@ -693,6 +709,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 }
 .bigtitle
 {
+    position: absolute;
     color:#000;
     font-weight: 400;
     margin-left:16px;
@@ -936,8 +953,19 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 {
     position: relative;
     min-height: 800px;
-    background: url(/assets/images/aboutbanner.png) no-repeat;
+    /* background: url(/assets/images/aboutbanner.png) no-repeat; */
     background-size: cover;
+    background-repeat: no-repeat;
+}
+.servicebanner-section:before
+{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
 }
 .servicebanner-content h2
 {
@@ -979,28 +1007,29 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 }
 .dev1
 {
-    width:200px;
+    width:80px;
     height: auto;
     object-fit: contain;
     margin: 0 auto 10px;
 }
 /*ourwork-section*/
 
-.ourwork-section
+.ourwork-section 
 {
     position: relative;
+    padding-bottom: 317px;
 }
-.ourwork-section:before
+/* .ourwork-section:before 
 {
     content: '';
     position: absolute;
-    left: -66px;
+    left: -146px;
     top: 308px;
     width: 837px;
-    height: 485px;
-    background: url('/assets/images/laptop.png') no-repeat center;
+    height: 375px;
+    background: url(/assets/images/laptop.png) no-repeat center;
     background-size: contain;
-}
+} */
 .ourwork-section h2
 {
     margin-bottom:10px;
@@ -1031,7 +1060,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 
 .whychoose-section
 {
-    margin-top:200px;
+    /* margin-top:200px; */
     background:#F9F9F9;
 }
 
@@ -1053,6 +1082,11 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
     height: 701px;
     background: url(/assets/images/contact.png) no-repeat center;
     background-size: cover;
+}
+.tel
+{
+    color: #000;
+    text-decoration: none;
 }
 .contactsection .form
 {
@@ -1131,7 +1165,38 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 .mapimage
 {
     border-radius: 35px;
+    width: 100%;
 }
+.addresstitle img 
+{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    margin-right:20px;
+}
+.addresstitle 
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.addresstitle h3
+{
+    margin-bottom:0px;
+}
+.address-content1 p
+{
+    padding:0 69px 0;
+}
+.address-content1 
+{
+    background-color: white;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 
 /*contactbanner*/
 
@@ -1350,6 +1415,35 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
 {
     min-width:100%;
 }
+/*privacy*/
+
+.privacybanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
+
+/*privacy*/
+
+.faqbanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
+
+/*terms*/
+
+.termsbanner
+{
+    position: relative;
+    min-height: 50vh;
+    background:url('/assets/images/careerbanner.png') no-repeat center;
+    background-size:cover;
+}
 
 /*footer*/
 
@@ -1389,6 +1483,7 @@ header.desktopmenu .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .
     text-decoration: none;
     color: #000;
     font-weight: 500;
+    text-transform: capitalize;
 }
 .footer-content ul li img 
 {
@@ -1434,369 +1529,388 @@ textarea:focus
     border-bottom-right-radius: 24px;
 }
 
-@media(max-width:1031px)
+/*modal*/
+
+.modal-cform .orangebtn
 {
-    
-    .homebanner 
-    {
-        height: 100vh;
-        overflow-x: hidden;
-    }
-    
-    section.hekpbusiness-section
-    {
-        padding-top:81px !important;
-    }
-    section.homebanner .containercenter 
-    {
-        left: 57% !important;
-    }
-    .contactbanner
-    {
-        position: relative;
-        height: 118vh;
-    }
-    .contactbanner-rightcontent
-    {
-        padding: 97px 15px;
-    }
-    .contactbanner:after
-    {
-        min-height: 77vh;
-    }
-    .aboutsection
-    {
-        overflow: hidden;
-        padding-bottom:120px;
-    }
-    .aboutsection:before 
-    {
-        width: 587px;
-        height: 361px;
-    }
-    .aboutsection-content
-    {
-        padding-bottom:0px;
-    }
-    .aboutsection-inntercontent 
-    {
-        width: 470px;
-    }
-    .aboutsection-content:before 
-    {
-        height: 357px;
-    }
-    .blog2 
-    {
-        padding: 66px 48px;
-    }
-    .blog4-content {
-        padding: 18px 70px;
-    }
-    .contactsection .form 
-    {
-        transform: scale(1);
-    }
-    .contactsection:before 
-    {
-        top: 56px;
-        width: 745px;
-        height: 611px;
-        background-size: cover;
-    }
-    .processlist li
-    {
-        font-size: 13px;
-    }
-    .processbox:before 
-    {
-        left: 134px;
-        width: 188px;
-    }
-    .numberbox h1
-    {
-        font-size: 90px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img 
-    {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .company
-    {
-        max-width: 100%;
-    }
-    .ourwork-section:before
-    {
-        width: 548px;
-        top: 265px;
-    }
-    .whychoose-section 
-    {
-        margin-top: 60px;
-    }
-    .clientlogos-leftcontent:before 
-    {
-        left: 60%;
-        width: 349px;
-    }
-    .hekpbusiness-section
-    {
-        overflow-x: hidden;
-    }
-    .blogsection
-    {
-        overflow-x: hidden;
-    }
-    .testimonial-section
-    {
-        overflow-x: hidden;
-    }
-    .awards-section
-    {
-        overflow-x: hidden;
-    }
-    .comaquote 
-    {
-        right: 14px;
-        width: 227px !important;
-    }
-    .tw {
-        width: 65%;
-        height: 4em;
-    }
-    .testimonial-carousel .owl-nav {
-        left: 12% !important;
-    }
-    .testimonial-carousel .owl-nav
-    {
-        width: 32%; 
-        bottom: 15%;
-    }
-    .bigtitle 
-    {
-        margin-left: 12px;
-    }
-    .bigtitle span 
-    {
-        font-size: 50px;
-    }
-    
+    width: fit-content;
+    border: 0px;
+    padding:15px 50px;
 }
-@media(max-width:1024px)
+.cmodal-header
 {
-    .homebanner 
-    {
-        height: 100vh;
-        overflow-x: hidden;
-    }
-    section.hekpbusiness-section
-    {
-        padding-top:81px !important;
-    }
-    section.homebanner .containercenter 
-    {
-        left: 57% !important;
-    }
-    .contactbanner
-    {
-        min-height: 100vh;
-    }
-    .contactbanner-rightcontent
-    {
-        padding: 97px 15px;
-    }
-    .contactbanner:after
-    {
-        min-height: 77vh;
-    }
-    .aboutsection
-    {
-        overflow: hidden;
-        padding-bottom:120px;
-    }
-    .aboutsection:before 
-    {
-        width: 587px;
-        height: 361px;
-    }
-    .aboutsection-content
-    {
-        padding-bottom:0px;
-    }
-    .aboutsection-inntercontent 
-    {
-        width: 470px;
-    }
-    .aboutsection-content:before 
-    {
-        height: 357px;
-    }
-    .blog2 
-    {
-        padding: 66px 48px;
-    }
-    .blog4-content {
-        padding: 18px 70px;
-    }
-    .contactsection .form 
-    {
-        transform: scale(1);
-    }
-    .contactsection:before 
-    {
-        top: 56px;
-        width: 745px;
-        height: 611px;
-        background-size: cover;
-    }
-    .processlist li
-    {
-        font-size: 13px;
-    }
-    .processbox:before 
-    {
-        left: 134px;
-        width: 188px;
-    }
-    .numberbox h1
-    {
-        font-size: 90px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img 
-    {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .company
-    {
-        max-width: 100%;
-    }
-    .ourwork-section:before
-    {
-        width: 548px;
-        top: 265px;
-    }
-    .whychoose-section 
-    {
-        margin-top: 60px;
-    }
-    .clientlogos-leftcontent:before 
-    {
-        left: 60%;
-        width: 349px;
-    }
-    .hekpbusiness-section
-    {
-        overflow-x: hidden;
-    }
-    .blogsection
-    {
-        overflow-x: hidden;
-    }
-    .testimonial-section
-    {
-        overflow-x: hidden;
-    }
-    .awards-section
-    {
-        overflow-x: hidden;
-    }
-    .comaquote 
-    {
-        right: 14px;
-        width: 227px !important;
-    }
-    .title 
-    {
-        font-size: 24px;
-    }
-    .tw {
-        width: 65%;
-        height: 4em;
-    }
-    .testimonial-carousel .owl-nav {
-        left: 12% !important;
-    }
-    .testimonial-carousel .owl-nav
-    {
-        width: 32%; 
-        bottom: 15%;
-    }
-    .bigtitle 
-    {
-        margin-left: 12px;
-    }
-    .bigtitle span 
-    {
-        font-size: 50px;
-    }
+    border-bottom:0px !important;
 }
+
+
 @media(max-width:1600px)
 {
-    body{
-        overflow-x: hidden;
-    }
     .homebanner
     {
         overflow-x: hidden;
     }
-    section.homebanner .containercenter 
+    .homebanner .containercenter 
     {
-        left: 50%;
+        left: 55%;
     }
     .aboutsection
     {
         overflow-x: hidden;
+        padding-bottom: 90px;
     }
-    .testimonial-section
+    .aboutsection:before 
     {
-        overflow-x: hidden;
+        width: 60rem;
+        height: 32rem;
     }
-    .testimonial-carousel .owl-nav
+    .testimonial-carousel .owl-nav 
     {
-        left:15%;
+        left: 17%;
     }
-    .hekpbusiness-section
+    section.contactbanner 
     {
-        overflow-x: hidden;
+        min-height: 129vh !important;
     }
-    .blogsection
+    .contactbanner:before 
     {
-        overflow-x: hidden;
+        height: 70vh;
     }
-    .aboutbanner-section
+    .contactbanner:after 
     {
-        overflow-x: hidden;
+        min-height: 70vh;
     }
-    .contactbanner {
+    .hekpbusiness-section 
+    {
+        padding: 30px 0 80px;
+    }
+    .smallicon img
+    {
+        width: 80px;
+    }
+    .clientlogos-section
+    {
         position: relative;
-        min-height: 100vh;
+        margin-top: -136px;
     }
-    .contactbanner:after
+    .comaquote 
+    {
+        right: 142px;
+    }
+    .testimonial-item p 
+    {
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 16% !important;
+        width: 24% !important;
+        bottom: 5% !important;
+    }
+    .bigtitle 
+    {
+        left: 11% !important;
+        top: 70% !important;
+    }
+    .blog4-innercontent 
+    {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 54px 45px;
+    }
+}
+@media(max-width:1366px)
+{
+    .homebanner-cnt
+    {
+        max-width: 60rem;
+        min-width: 60rem;
+        width: 60rem;
+        margin: auto;
+    }
+    .homebanner .containercenter 
+    {
+        left: 55%;
+    }
+    .hekpbusiness-section 
+    {
+        padding: 30px 0 80px;
+    }
+    .aboutsection 
+    {
+        padding-bottom: 90px;
+    }
+    .aboutsection:before 
+    {
+        width: 60rem;
+        height: 32rem;
+    }
+    .clientlogos-section
+    {
+        position: relative;
+        margin-top: -136px;
+    }
+    .clientlogos-leftcontent:before
+    {
+        width:437px;
+    }
+    .aboutsection:before
+    {
+        width: 715px;
+        height: 418px;
+    }
+    .blog2 
+    {
+        padding: 77px 48px !important;
+    }
+    .blog4-innercontent {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 53px 45px !important;
+    }
+    .comaquote 
+    {
+        right: 90px;
+    }
+    .testimonial-item p 
+    {
+        height: 6rem;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 17% !important;
+        width: 30% !important;
+        bottom: 6% !important;
+    }
+    .bigtitle 
+    {
+        left: 11% !important;
+        top: 70% !important;
+    }
+    section.contactbanner 
+    {
+        min-height: 139vh !important;
+        padding-bottom:0px;
+    }
+    .careerbanner 
     {
         min-height: 66vh;
+    }
+    .careerbanner .containercenter
+    {
+        top:60%;
+    }
+}
+@media(min-width:768px) and (max-width:1024px)
+{
+    .bannerheading 
+    {
+        font-size: 30px;
+    }
+    .bannertext
+    {
+        font-size: 13px;
+    }
+    .homebanner-tabcnt 
+    {
+        max-width: 35rem;
+        min-width: 35rem;
+        margin: auto;
+    }
+    .orangebtn 
+    {
+        font-size: 13px;
+        padding: 15px 33px;
+    }
+    .contactbanner-rightcontent 
+    {
+        padding: 101px 15px;
+    }
+    .hekpbusiness-section .cardbox
+    {
+        margin-bottom:26px;
+    }
+    .aboutsection
+    {
+        overflow: hidden;
+        padding-bottom: 70px;
+    }
+    .aboutsection-inntercontent 
+    {
+        width: 15rem;
+    }
+    .aboutsection-inntercontent p 
+    {
+        font-size: 13px;
+    }
+    .aboutsection:before 
+    {
+        top: -139px;
+        width: 587px;
+        height: 44rem;
+    }
+    .aboutsection-content:before 
+    {
+        width: 587px;
+        height: 33rem;
+    }
+    .title
+    {
+        font-size: 22px;
+    }
+    .subtitle
+    {
+        font-size: 19px;
+    }
+    .clientlogos-section 
+    {
+        margin-top: -139px;
+    }
+    .clientlogos-leftcontent:before 
+    {
+        left: 64%;
+        width: 239px;
+    }
+    .company
+    {
+        width: 100%;
+    }
+    .partner
+    {
+        display: block;
+        margin: auto;
+    }
+    .blogtabs a
+    {
+        padding:0px;
+    }
+    .contactsection:before 
+    {
+        width: 767px;
+        height: 680px;
+        background-size: contain;
+    }
+    .contactsection .form 
+    {
+        transform: scale(0.9);
+    }
+    .card
+    {
+        margin-bottom: 25px;
+    }
+    .ourwork-section:before
+    {
+        width: 437px;
+        top: 223px;
+    }
+    .ourwork-section
+    {
+        padding-bottom:0px;
+    }
+    .whychoose-section
+    {
+        margin-top:100px;
+    }
+    .processbox:before
+    {
+        left: 129px;
+        width: 113px;
+    }
+    .numberbox
+    {
+        top:-66px;
+    }
+    .numberbox h1
+    {
+        font-size: 80px;
+    }
+    .servicetype-tabs
+    {
+        width: 100% !important;
+    }
+    .servicetype-left img {
+        min-width: 100%;
+        min-height: 400px;
+        object-fit: revert;
+    }
+    .blogsection p
+    {
+        font-size: 13px;
+    }
+    .blog4-innercontent 
+    {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 42px 45px;
+    }
+    .blog2 
+    {
+        padding: 53px 48px !important;
+    }
+    .p0
+    {
+        padding:0px !important;
+    }
+    .widget h5 
+    {
+        font-size: 17px;
+    }
+    .bannerheading
+    {
+        font-size:35px;
+    }
+    .ourprocess-section
+    {
+        padding-bottom: 0px;
+    }
+    .testimonial-item p 
+    {
+        height: 9rem !important;
+    }
+    .testimonial-carousel .owl-nav 
+    {
+        left: 17% !important;
+        width: 43% !important;
+        bottom: 0% !important;
+    }
+    .testimonial-item p 
+    {
+        height: 9rem;
+    }
+    .bigtitle 
+    {
+        left: 7% !important;
+        top: 79% !important;
+    }
+    .comaquote 
+    {
+        right: 25px;
+        width: 214px !important;
+    }
+    .contactbanner 
+    {
+        min-height: 103vh !important;
+        max-height: 103vh !important;
+        padding-bottom:0px;
+    }
+    .address-content
+    {
+        margin-top: 30px;
     }
 }
 @media(max-width:576px)
 {
-    body
-    {
-        overflow-x: hidden;
-    }
     .title
     {
         font-size: 25px !important;
+    }
+    .homebanner-cnt
+    {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
     .bannerheading 
     {
@@ -1968,7 +2082,7 @@ textarea:focus
     }
     .blog4-content 
     {
-        padding: 33px 51px !important;
+        padding: 0px;
     }
     .blog4-content:before
     {
@@ -1978,13 +2092,14 @@ textarea:focus
     {
         border-radius: 0px;
     }
-    .testimonial-item p
+    .blog2 p
     {
         font-size: 13px;
     }
-    .testimonial-carousel .owl-nav
+    .testimonial-item p 
     {
-        width: 68%;
+        height: 6rem !important;
+        color:#fff;
     }
     .starlist ul li svg 
     {
@@ -2108,6 +2223,7 @@ textarea:focus
         position: relative;
         z-index: 1;
     }
+    
     .testimonial-carousel .item:before
     {
         content: '';
@@ -2126,8 +2242,14 @@ textarea:focus
     }
     .testimonial-carousel .owl-nav 
     {
-        left: 23% !important;
-        bottom: 180px;
+        left: 19% !important;
+        bottom: -31px !important;
+        width: 50% !important;
+    }
+    .bigtitle 
+    {
+        left: 9% !important;
+        top: 105% !important;
     }
     .testimonial-rightdiv
     {
@@ -2197,181 +2319,90 @@ textarea:focus
     {
         font-size: 13px;
     }
-    .bigtitle
-    {
-        margin-left: 37px; 
-    }
     .bigtitle span 
     {
         font-size: 40px;
     }
+    .address-content
+    {
+        margin-top: 30px;
+    }
+    .offcanvas-body a
+    {
+        color:#000 !important;
+    }
+    .offcanvas-body a:nth-child(1)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(2)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(4)
+    {
+        margin-bottom:20px;
+    }
+    .offcanvas-body a:nth-child(5)
+    {
+        margin-bottom:20px;
+    }
+    .estimate {
+        border-radius: 100px;
+        background: #F2735B;
+        padding: 16px 40px;
+    }
 
 }
-@media(max-width:1366px)
+@media (max-width:1920px)
 {
-    .clientlogos-leftcontent:before
+    .clientlogos-section 
     {
-        width:437px;
-    }
-    .aboutsection:before
-    {
-        width: 715px;
-        height: 418px;
+        margin-top: -158px;
     }
     .blog2 
     {
         padding: 78px 48px;
     }
-}
-@media(max-width:768px)
-{
-    
-    .contactbanner-rightcontent 
+    .blog3-content 
     {
-        padding: 144px 15px;
+        padding: 146px 70px;
     }
-    .aboutsection
+    .blog4-innercontent {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 66px 45px;
+    }
+    .testimonial-item p 
     {
-        overflow: hidden;
+        height: 6rem;
     }
-    .aboutsection:before 
+    .testimonial-carousel .owl-nav
     {
-        width: 587px;
-        height: 361px;
+        left:23%;
+        width: 25%;
+        bottom: -4%;
     }
-    .aboutsection-inntercontent 
+    .bigtitle 
     {
-        width: 290px;
+        left: 19%;
+        top: 79%;
     }
-    .aboutsection-content:before
+    .contactbanner 
     {
-        height: 420px;
+        min-height: 108vh !important;
     }
-    .title
+    .contactbanner:before 
     {
-        font-size: 30px;
+        height: 70vh;
     }
-    .subtitle
+    .contactbanner:after 
     {
-        font-size: 19px;
+        min-height: 70vh;
     }
-    .clientlogos-leftcontent:before 
+    .careerbanner 
     {
-        left: 64%;
-        width: 239px;
-    }
-    .company
-    {
-        width: 100%;
-    }
-    .partner
-    {
-        display: block;
-        margin: auto;
-    }
-    .blogtabs a
-    {
-        padding:0px;
-    }
-    .contactsection:before 
-    {
-        width: 767px;
-        height: 680px;
-        background-size: contain;
-    }
-    .contactsection .form 
-    {
-        transform: scale(0.9);
-    }
-    .card
-    {
-        margin-bottom: 25px;
-    }
-    .ourwork-section:before
-    {
-        width: 437px;
-        top: 223px;
-    }
-    .ourwork-section
-    {
-        padding-bottom:0px;
-    }
-    .whychoose-section
-    {
-        margin-top:100px;
-    }
-    .processbox:before
-    {
-        left: 129px;
-        width: 113px;
-    }
-    .numberbox
-    {
-        top:-66px;
-    }
-    .numberbox h1
-    {
-        font-size: 80px;
-    }
-    .servicetype-tabs
-    {
-        width: 100% !important;
-    }
-    .servicetype-left img {
-        min-width: 100%;
-        min-height: 400px;
-        object-fit: revert;
-    }
-    .blog4-content 
-    {
-        padding: 0 70px;
-    }
-    .blog4-content:before 
-    {
-        height: -webkit-fill-available;
-    }
-    .blog1 
-    {
-        background-size: cover;
-    }
-    .blog2 
-    {
-        padding: 12px 48px;
-    }
-    .blog1-content h3
-    {
-        font-size: 16px;
-    }
-    .blog3-content
-    {
-        padding:0px;
-    }
-    .blog4-content 
-    {
-        padding: 12px 40px;
-    }
-    .blog1 p
-    {
-        font-size: 13px;
-    }
-    .blog1-content p
-    {
-        font-size: 13px;
-    }
-    .p0
-    {
-        padding:0px !important;
-    }
-    .widget h5 
-    {
-        font-size: 17px;
-    }
-    .bannerheading
-    {
-        font-size:35px;
-    }
-    .ourprocess-section
-    {
-        padding-bottom: 0px;
+        min-height: 66vh;
     }
 }

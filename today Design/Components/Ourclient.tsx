@@ -15,6 +15,7 @@ export default function Ourclient()
         our_story_heading: string;
         our_story: string;
         our_story_image: string;
+        path: string;
       };
         // set the states for data,loading, and error
         const [data, setData] = useState<Ourstory | null>(null);
@@ -68,7 +69,7 @@ export default function Ourclient()
   
                     </Col>
                     <Col lg={6} md={6}>
-                        <img src='/assets/images/companyprofile.png' className='company' alt=''/>
+                        <img src={`${data?.path}${data?.our_story_image}`} className='company aboutallimg' alt=''/>
                     </Col>
                 </Row>
             </Container>

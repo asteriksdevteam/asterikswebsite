@@ -21,35 +21,35 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'   alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png'  className='tw' alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec6.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Fluter</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec7.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Appium</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec8.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Fire Base</p>
                                 </Col>
                             </Row>
                         </Tab>
@@ -57,27 +57,27 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec6.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Fluter</p>
                                 </Col>
                             </Row>
                         </Tab>
@@ -85,23 +85,23 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                             </Row>
                         </Tab>
@@ -109,31 +109,31 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png'  className='tw' alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec6.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Fluter</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec7.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Appium</p>
                                 </Col>
                             </Row>
                         </Tab>
@@ -141,23 +141,23 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                             </Row>
                         </Tab>
@@ -165,31 +165,31 @@ export default function Technologies()
                             <Row>
                                 <Col>
                                     <img src='/assets/images/tec1.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Ionic</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec2.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Html5</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec3.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Gradle</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec4.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Digital Ocean</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec5.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Python</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec6.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Fluter</p>
                                 </Col>
                                 <Col>
                                     <img src='/assets/images/tec7.png' className='tw'  alt='' />
-                                    <p className='mt-3 tectext'>Sit lectus</p>
+                                    <p className='mt-3 tectext'>Appium</p>
                                 </Col>
                             </Row>
                         </Tab>

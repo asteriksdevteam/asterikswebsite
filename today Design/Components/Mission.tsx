@@ -10,6 +10,7 @@ export default function Mission()
     mission_statment_heading: string;
     mission_statment: string;
     mission_image: string;
+    path: string;
   };
     // set the states for data,loading, and error
     const [data, setData] = useState<Mission | null>(null);
@@ -65,7 +66,7 @@ const errorComponent = <div className="text-red-500">Error: {error}</div>;
 
                     </Col>
                     <Col lg={6} md={6}>
-                        <img src='/assets/images/mission.png' className='company' alt=''/>
+                        <img src={`${data?.path}${data?.mission_image}`} className='company aboutallimg' alt=''/>
                     </Col>
                 </Row>
             </Container>

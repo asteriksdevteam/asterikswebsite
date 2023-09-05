@@ -10,13 +10,18 @@ export default function Helpbusiness()
         Heading: string;
         Description: string;
         business_idea_heading: string;
+        business_idea_image: string
         business_idea_desc: string;
         finance_planning_heading: string;
+        finance_planning_image: string;
         finance_planning_desc: string;
         market_analysis_heading: string;
         market_analysis_desc: string;
+        market_analysis_image: string;
         develop_web_heading: string;
         develop_web_desc: string;
+        develop_web_image: string;
+        path: string;
       };
         // set the states for data,loading, and error
         const [data, setData] = useState<Homebanner | null>(null);
@@ -75,7 +80,7 @@ export default function Helpbusiness()
                 <Col lg={3} md={6} xs={12}>
                     <div className='cardbox'>
                         <div>
-                           <img src='/assets/images/box-search.png' className='smallicon'  alt=''/>
+                           <img src={`${data?.path}${data?.business_idea_image}`} className='smallicon'  alt=''/>
                         </div>
                         {/* <h3 className='subtitle'>Business Idea Planning</h3>
                         <p>Asteriks Digital can assist you in creating your dream from the ground up and guiding you towards the full potential of your business concept.</p> */}
@@ -93,7 +98,7 @@ export default function Helpbusiness()
                 </Col>
                 <Col lg={3} md={6} xs={12}>
                     <div className='cardbox'>
-                       <img src='/assets/images/empty-wallet.png' className='smallicon'  alt=''/>
+                       <img src={`${data?.path}${data?.finance_planning_image}`} className='smallicon'  alt=''/>
                         {/* <h3 className='subtitle'>Financial Planning System</h3>
                         <p>Asteriks Digital can assist you in creating your dream from the ground up and guiding you towards the full potential of your business concept.</p> */}
 
@@ -112,7 +117,7 @@ export default function Helpbusiness()
                 </Col>
                 <Col lg={3} md={6} xs={12}>
                     <div className='cardbox'>
-                       <img src='/assets/images/chart-square.png' className='smallicon' alt=''/>
+                       <img src={`${data?.path}${data?.market_analysis_image}`} className='smallicon' alt=''/>
                         {/* <h3 className='subtitle'>Market Analysis Project</h3>
                         <p>Asteriks Digital can assist you in creating your dream from the ground up and guiding you towards the full potential of your business concept.</p> */}
                     
@@ -129,7 +134,7 @@ export default function Helpbusiness()
                 </Col>
                 <Col lg={3} md={6} xs={12}>
                     <div className='cardbox'>
-                       <img src='/assets/images/code-11.png' className='smallicon' alt=''/>
+                       <img src={`${data?.path}${data?.develop_web_image}`} className='smallicon' alt=''/>
                         {/* <h3 className='subtitle'>Development Website and App</h3>
                         <p>Asteriks Digital can assist you in creating your dream from the ground up and guiding you towards the full potential of your business concept.</p> */}
 
