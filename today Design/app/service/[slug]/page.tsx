@@ -192,21 +192,21 @@ export default function Page()
                       <div className='card'>
                           <img src={`${data?.path}${data?.box2_image}`} className='dev1' alt="" />
                           <h3 className='subtitle'>{data?.box2_heading}</h3>
-                          <p>{data?.box1_desc}</p>
+                          <p>{data?.box2_desc}</p>
                       </div>
                   </Col>
                   <Col lg={3} md={6}>
                       <div className='card'>
                           <img src={`${data?.path}${data?.box3_image}`} className='dev1' alt="" />
                           <h3 className='subtitle'>{data?.box3_heading}</h3>
-                          <p>{data?.box1_desc}</p>
+                          <p>{data?.box3_desc}</p>
                       </div>
                   </Col>
                   <Col lg={3} md={6}>
                       <div className='card'>
                           <img src={`${data?.path}${data?.box4_image}`} className='dev1' alt="" />
                           <h3 className='subtitle'>{data?.box4_heading}</h3>
-                          <p>{data?.box1_desc}</p>
+                          <p>{data?.box4_desc}</p>
                       </div>
                   </Col>
               </Row>
@@ -218,7 +218,7 @@ export default function Page()
                 <Row className='justify-content-center text-center'>
                     <Col lg={9} md={9}>
                         <h2 className='title'>{data?.portfolio_heading}</h2>
-                        <h3 className='subtitle3'>Web Development Solutions Portfolio</h3>
+                        <h3 className='subtitle3'>{data?.sub_heading_chooseservices}</h3>
                         <p className='desc'>{data?.portfolio_desc}</p>
                     </Col>
                 </Row>
@@ -253,7 +253,7 @@ export default function Page()
                 <Row className='justify-content-center text-center'>
                     <Col lg={9}>
                         <h2 className='title'>{data?.process_heading}</h2>
-                        <h3 className='subtitle2 mb-4'> Web Development</h3>
+                        <h3 className='subtitle2 mb-4'> {data?.sub_heading_ourprocess}</h3>
                         <p>{data?.process_desc}</p>
                     </Col>
                 </Row>
